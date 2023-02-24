@@ -16,7 +16,7 @@ The project is currently live on a variety of testnets (see [Contracts](getting-
 
 At the time of writing (February, 2023), **new development for the contracts is finished and the team is preparing them for an audit.** We anticipate the audit will conclude in mid- to late-March, 2023 and the protocol will be deployed and generally available in April, 2023.
 
-In the mean time, we encourage you to [get an overview of the protocol](core-concepts/conceptual-overview.md). We also welcome contributions and would love for you to [get involved](extras/getting-involved.md).
+In the mean time, we encourage you to [get an overview of the protocol](core-concepts/conceptual-overview.md). We also welcome contributions and would love for you to [get involved](extras/getting-involved.md). Finally, head to [gitcoin.co](https://www.gitcoin.co) to keep up to date with protocol releases.
 
 ### Next Steps
 
