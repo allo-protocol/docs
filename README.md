@@ -8,11 +8,11 @@ Allo Protocol is a set of smart contracts that enable the democratic allocation 
 
 This new iteration is more flexible and more modular. It powers Gitcoin's three products, [Builder](https://github.com/gitcoinco/grants-round/tree/main/packages/builder), [Explorer](https://github.com/gitcoinco/grants-round/tree/main/packages/grant-explorer), and [Manager](https://github.com/gitcoinco/grants-round/tree/main/packages/round-manager). More importantly, it empowers anyone to build on top of a thriving ecosystem of grants and lets communities everywhere fund their shared needs.
 
-You can learn more about the background of Allo in [Gitcoin's announcement post](https://go.gitcoin.co/blog/introduction-to-grants-protocol) or by reading [this summary brief from the governance forum](https://gov.gitcoin.co/t/introducing-gitcoin-grants-stack-allo-protocol-product-overviews-part-1-of-2/12664/1).
+You can learn more about the background of Allo in [Gitcoin's announcement post](https://go.gitcoin.co/blog/announcing-the-decentralized-future-of-gitcoin-grants) or by reading [this summary brief from the governance forum](https://gov.gitcoin.co/t/introducing-gitcoin-grants-stack-allo-protocol-product-overviews-part-1-of-2/12664/1).
 
 ### Current Status
 
-The project is currently live on a variety of testnets (see [Contracts](getting-started/contracts.md)), including [Goerli](getting-started/contracts.md#goerli). You can see the live [roadmap on Github](https://github.com/orgs/gitcoinco/projects/8/views/2) and [view the contracts in the repository](https://github.com/gitcoinco/grants-round/tree/main/packages/contracts).
+The project is currently live on a variety of testnets (see [Contracts](getting-started/contracts.md)), including [Goerli](getting-started/contracts.md#goerli). You can see the live [roadmap on Github](https://github.com/orgs/gitcoinco/projects/8/views/2) and [view the contracts in the repository](https://github.com/allo-protocol/contracts).
 
 At the time of writing (February, 2023), **new development for the contracts is finished and the team is preparing them for an audit.** We anticipate the audit will conclude in mid- to late-March, 2023 and the protocol will be deployed and generally available in April, 2023.
 

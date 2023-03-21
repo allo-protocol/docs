@@ -14,7 +14,7 @@ A project is any group that wishes to apply and receive funding. They are identi
 
 Every project in the registry is represented with a unique ID and some meta data. The metadata is made up of a protocol id (i.e. `1` for IPFS) and a pointer to data off-chain (i.e. [`QmPMERYmqZtbHmqd2UzRhX9F4cixnMQU2GFa2hYAsQ6J3D`](https://cloudflare-ipfs.com/ipfs/QmPMERYmqZtbHmqd2UzRhX9F4cixnMQU2GFa2hYAsQ6J3D)).
 
-You can read more about the metadata and protocol IDs [here](https://github.com/gitcoinco/grants-round/blob/main/packages/contracts/docs/MetaPtrProtocol.md).&#x20;
+You can read more about the metadata and protocol IDs [here](https://github.com/allo-protocol/contracts/blob/main/docs/MetaPtrProtocol.md).&#x20;
 
 ### Registering a Project
 
