@@ -13,7 +13,7 @@
 * [Program](core-concepts/program.md)
 * [Round](core-concepts/round.md)
 * [Voting Strategy](core-concepts/voting-strategy.md)
-* [Payout Strategy](core-concepts/payout-strategy.md)
+* [Payout Strategy](core-concepts/payout-strategy-coming-soon.md)
 
 ## Extras
 

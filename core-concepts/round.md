@@ -23,7 +23,7 @@ Once it is created, a Round goes through three phases: application, voting, and 
 
 Each of the above timestamps is set during contract creation. There are setter methods on the contract for updating these timestamps after contract creation.
 
-The majority of the logic for a round takes place in the [Voting Strategy](voting-strategy.md) and [Payout Strategy](payout-strategy.md). These are customizable logic contracts that are set at contract creation.
+The majority of the logic for a round takes place in the [Voting Strategy](voting-strategy.md) and [Payout Strategy](payout-strategy-coming-soon.md). These are customizable logic contracts that are set at contract creation.
 
 As an example, Gitcoin recently ran three simultaneous rounds, including a [Climate Solutions](https://go.gitcoin.co/blog/announcing-the-gitcoin-alpha-round) round ([contract](https://go.gitcoin.co/blog/announcing-the-gitcoin-alpha-round), [metadata](https://cloudflare-ipfs.com/ipfs/bafkreighrvkk654o5amjlnim7mc4cf4qvofgx3yeftv2kzjama2phood4e)). The application period was open from January 6, 2023 (timestamp `1673028540`) to January 16, 2023 (timestamp `1673913600`). Voting for the round opened on January 17, 2023 (timestamp `1673956800`) and closed on January 31, 2023 (timestamp `1675209540`). The token used for voting was [DAI](https://etherscan.io/address/0x6B175474E89094C44Da98b954EedeAC495271d0F). The [Voting Strategy](voting-strategy.md) used was Gitcoin's [Quadratic Funding Voting Strategy](https://etherscan.io/address/0xBaA2f652c7a2228F2e161A615B8a55b359a0a2c8#code). The Payout Strategy used was Gitcoin's [Merkle Payout Strategy](https://etherscan.io/address/0xB483dc6FF0b9554119232edA962862169A13915C#code).&#x20;
 
