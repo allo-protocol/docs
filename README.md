@@ -22,9 +22,16 @@ The [Grants Stack](https://www.gitcoin.co/grants-stack) is a self-service suite 
 
 The project is currently live on a variety of testnets (see [Contracts](getting-started/contracts.md)), including [Goerli](getting-started/contracts.md#goerli). You can see the live [roadmap on Github](https://github.com/orgs/gitcoinco/projects/8/views/2) and [view the contracts in the repository](https://github.com/allo-protocol/contracts).
 
-At the time of writing (February, 2023), **new development for the contracts is finished and the team is preparing them for an audit.** We anticipate the audit will conclude in mid- to late-March, 2023 and the protocol will be deployed and generally available in April, 2023.
+At the time of writing (April, 2023), **new development for the contracts is finished and the audit has been completed.** The protocol will be deployed and generally available mid May, 2023.
 
-In the mean time, we encourage you to [get an overview of the protocol](core-concepts/conceptual-overview.md). We also welcome contributions and would love for you to [get involved](extras/getting-involved.md). Finally, head to [gitcoin.co](https://www.gitcoin.co) to keep up to date with protocol releases.
+### Learning More
+
+You can use this documentation to [get an overview of the protocol](core-concepts/conceptual-overview.md). \
+If you are interested in building with Allo, check out the [Allo Builders Telegram group](https://t.me/+IExiDL8CTnFhZjcx).\
+We also welcome contributions and would love for you to [get involved](extras/getting-involved.md). \
+Finally, you can head to [gitcoin.co](https://www.gitcoin.co) to keep up to date with protocol releases.
+
+
 
 ### Next Steps
 

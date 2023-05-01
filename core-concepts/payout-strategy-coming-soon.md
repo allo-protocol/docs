@@ -4,7 +4,7 @@ description: What role does a Payout Strategy play in Allo?
 
 # Payout Strategy
 
-Voting is handled by the Voting Strategy contract, through the Round contract. Similarly, payout out grants is handled by the Payout Strategy, a contract that adheres to the [`IPayoutStrategy` Interface](https://github.com/allo-protocol/contracts/blob/main/contracts/payoutStrategy/IPayoutStrategy.sol).
+Paying out the grant pool is handled by the Payout Strategy, a contract that adheres to the [`IPayoutStrategy` Interface](https://github.com/allo-protocol/contracts/blob/main/contracts/payoutStrategy/IPayoutStrategy.sol).
 
 ### Payout Strategy Interface
 
