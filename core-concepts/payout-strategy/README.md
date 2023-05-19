@@ -27,4 +27,4 @@ The `payout(bytes[] calldata _encodedPayoutData)` is what distributes the funds 
 
 **Merkle Payout Strategy**
 
-Gitcoin uses a [Merkle Payout Strategy](https://github.com/allo-protocol/contracts/blob/main/contracts/payoutStrategy/MerklePayoutStrategy/MerklePayoutStrategyImplementation.sol) for all of its [Rounds](round.md). If you with to use the same strategy, you must deploy an instance of the Payout Strategy Contract using the Factory (see [Contracts](../getting-started/contracts.md)) before you create a new Round with the Round Factory (see [Contracts](../getting-started/contracts.md)).
+Gitcoin uses a [Merkle Payout Strategy](https://github.com/allo-protocol/contracts/blob/main/contracts/payoutStrategy/MerklePayoutStrategy/MerklePayoutStrategyImplementation.sol) for all of its [Rounds](../round.md). If you with to use the same strategy, you must deploy an instance of the Payout Strategy Contract using the Factory (see [Contracts](../../getting-started/contracts.md)) before you create a new Round with the Round Factory (see [Contracts](../../getting-started/contracts.md)).

@@ -12,7 +12,7 @@ Below you will find some ways to help, but please don't feel limited by them. If
 
 Building on top of the protocol is a great way to get involved and contribute to the ecosystem.
 
-One easy way to get involved is to create your own, custom [voting](../core-concepts/voting-strategy.md) or [payout](../core-concepts/payout-strategy-coming-soon.md) strategies. By combining these in interesting ways, you can use the power of Quadratic Funding to do anything you can think of.
+One easy way to get involved is to create your own, custom [voting](../core-concepts/voting-strategy/) or [payout](../core-concepts/payout-strategy/) strategies. By combining these in interesting ways, you can use the power of Quadratic Funding to do anything you can think of.
 
 If you have other ideas and want help on how to build them, join [the Allo Builders group](https://t.me/+IExiDL8CTnFhZjcx) on Telegram or introduce yourself in [Discord](https://discord.com/invite/gitcoin).
 
