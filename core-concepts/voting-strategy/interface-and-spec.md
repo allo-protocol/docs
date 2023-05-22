@@ -8,9 +8,9 @@ This documentation covers methods and events in the IVotingStrategy interface. S
 
 The Allo `IVotingStrategy` interface can be found here: [https://github.com/allo-protocol/contracts/blob/main/contracts/votingStrategy/IVotingStrategy.sol](https://github.com/allo-protocol/contracts/blob/main/contracts/votingStrategy/IVotingStrategy.sol)&#x20;
 
-### Functions
+## Functions
 
-#### **init**
+### **init**
 
 [`function init() external`](#user-content-fn-1)[^1]
 
@@ -23,7 +23,7 @@ The init function needs to be called by a `RoundImplementation` before voting ca
 | Success |                                  | `roundAddress` is set to `msg.sender`                                                 |
 | Error   | "init: roundAddress already set" | Will be returned if this instance of the voting contract has already been initialized |
 
-#### **vote**
+### **vote**
 
 `function vote(bytes[] calldata _encodedVotes, address _voterAddress) external virtual payable`
 

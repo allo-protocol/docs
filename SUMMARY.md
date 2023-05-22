@@ -21,9 +21,9 @@
 * [Payout Strategy](core-concepts/payout-strategy/README.md)
   * [Getting Started](core-concepts/payout-strategy/getting-started.md)
   * [Interface and Spec](core-concepts/payout-strategy/interface-and-spec.md)
+  * [Writing a Custom Payout Strategy](core-concepts/payout-strategy/writing-a-custom-payout-strategy.md)
   * [Security Considerations](core-concepts/payout-strategy/security-considerations.md)
   * [Payout Strategy Template](core-concepts/payout-strategy/payout-strategy-template.md)
-  * [Writing a Custom Payout Strategy](core-concepts/payout-strategy/writing-a-custom-payout-strategy.md)
 
 ## Extras
 
