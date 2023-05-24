@@ -79,5 +79,3 @@ An event will be submitted when either function is successful.
 ### Getting Project Data
 
 Data on projects, like when they register and when they update their metadata, is exposed via events and indexed in a [subgraph](../getting-started/subgraph.md#project-registry). If you want to build something that leverages the data in the Project Registry, we recommend using this subgraph.
-
-&#x20;

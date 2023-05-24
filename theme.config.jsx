@@ -3,5 +3,5 @@ export default {
   project: {
     link: 'https://github.com/allo-protocol'
   },
-  docsRepositoryBase: 'https://github.com/allo-protocol/docs',
+  docsRepositoryBase: 'https://github.com/allo-protocol/docs/blob/main',
 }
