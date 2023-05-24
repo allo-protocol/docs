@@ -66,7 +66,6 @@ Metadata can be updated using
 
 - `updateProjectMetadata(uint256 projectId,MetaPtr metadata)` - overwrites the existing metadata information for the project.
 
-\
 An event will be emitted when the metadata is successfully updated.\
 Only a project owner can update the metadata.
 
