@@ -1,0 +1,11 @@
+{
+	"getting-started": "Getting Started",
+	"interface-and-spec": "Interface and Spec",
+	"writing-a-custom-voting-strategy": "Writing a Custom Voting Strategy",
+	"security-considerations": "Security Considerations",
+	"strategy-starter-kit": {
+		"title": "Strategy Starter Kit",
+		"href": "https://github.com/orgs/allo-protocol/repositories",
+		"newWindow": true
+	}
+}
