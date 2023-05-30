@@ -15,12 +15,7 @@ For example, if a DAO wanted to hold a quarterly vote to distribute some of its 
 
 Once it is created, a Round goes through three phases: application, voting, and payout. All three of these are marked by timestamps:
 
-| Phase       | Timestamp                                                      |
-| ----------- | -------------------------------------------------------------- |
-| Application | after `applicationsStartTime` and before `applicationsEndTime` |
-| Selection   | after `applicationsEndTime` before `roundStartTime`            |
-| Voting      | after `roundStartTime` and before `roundEndTime`               |
-| Payout      | after `roundEndTime`                                           |
+<table><thead><tr><th width="203">Phase</th><th>Timestamp</th></tr></thead><tbody><tr><td>Application</td><td>after <code>applicationsStartTime</code> and before <code>applicationsEndTime</code></td></tr><tr><td>Selection</td><td>after <code>applicationsEndTime</code> before <code>roundStartTime</code></td></tr><tr><td>Voting</td><td>after <code>roundStartTime</code> and before <code>roundEndTime</code></td></tr><tr><td>Payout</td><td>after <code>roundEndTime</code></td></tr></tbody></table>
 
 Each of the above timestamps is set during contract creation. There are setter methods on the contract for updating these timestamps after contract creation.
 
@@ -115,7 +110,7 @@ Here is an example of metadata from the recent Climate Solution round ([original
 
 ### Applying to a Round
 
-Once a project has been listed in the [Project Registry](project-registry.md), then it can apply for any round on the Allo Protocol. Every Round contract will have a `applyToRound(bytes32,MetaPtr)` method, which accepts a project ID (provided by the Project Registry) and the project meta data.
+Once a project has been listed in the [Project Registry](project-registry/), then it can apply for any round on the Allo Protocol. Every Round contract will have a `applyToRound(bytes32,MetaPtr)` method, which accepts a project ID (provided by the Project Registry) and the project meta data.
 
 ### Voting in a Round
 

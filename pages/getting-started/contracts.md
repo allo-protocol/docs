@@ -12,27 +12,11 @@ The list of contracts is divided into two sections. The first section covers all
 
 #### Ethereum Mainnet
 
-| Contract                              | Address                                                                                                                    |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| ProgramFactory                        | [0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code) |
-| ProgramImplementation                 | [0x21B0be8253DEdA0d2d8f010d06ED86093d52359b](https://etherscan.io/address/0x21B0be8253DEdA0d2d8f010d06ED86093d52359b#code) |
-| QuadraticFundingVotingStrategyFactory | [0x06A6Cc566c5A88E77B1353Cdc3110C2e6c828e38](https://etherscan.io/address/0x06A6Cc566c5A88E77B1353Cdc3110C2e6c828e38#code) |
-| QFVotingStrategyImplementation        | [0x5030e1a81330d5098473E8d309E116C2792202eB](https://etherscan.io/address/0x5030e1a81330d5098473E8d309E116C2792202eB#code) |
-| RoundFactory                          | [0xE2Bf906f7d10F059cE65769F53fe50D8E0cC7cBe](https://etherscan.io/address/0xE2Bf906f7d10F059cE65769F53fe50D8E0cC7cBe#code) |
-| RoundImplementation                   | [0x3e7f72DFeDF6ba1BcBFE77A94a752C529Bb4429E](https://etherscan.io/address/0x3e7f72DFeDF6ba1BcBFE77A94a752C529Bb4429E#code) |
-| ProjectRegistry                       | [0x03506eD3f57892C85DB20C36846e9c808aFe9ef4](https://etherscan.io/address/0x03506eD3f57892C85DB20C36846e9c808aFe9ef4#code) |
+<table><thead><tr><th width="268.5">Contract</th><th>Address</th></tr></thead><tbody><tr><td>ProgramFactory</td><td><a href="https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code">0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB</a></td></tr><tr><td>ProgramImplementation</td><td><a href="https://etherscan.io/address/0x21B0be8253DEdA0d2d8f010d06ED86093d52359b#code">0x21B0be8253DEdA0d2d8f010d06ED86093d52359b</a></td></tr><tr><td>QuadraticFundingVotingStrategyFactory</td><td><a href="https://etherscan.io/address/0x06A6Cc566c5A88E77B1353Cdc3110C2e6c828e38#code">0x06A6Cc566c5A88E77B1353Cdc3110C2e6c828e38</a></td></tr><tr><td>QFVotingStrategyImplementation</td><td><a href="https://etherscan.io/address/0x5030e1a81330d5098473E8d309E116C2792202eB#code">0x5030e1a81330d5098473E8d309E116C2792202eB</a></td></tr><tr><td>RoundFactory</td><td><a href="https://etherscan.io/address/0xE2Bf906f7d10F059cE65769F53fe50D8E0cC7cBe#code">0xE2Bf906f7d10F059cE65769F53fe50D8E0cC7cBe</a></td></tr><tr><td>RoundImplementation</td><td><a href="https://etherscan.io/address/0x3e7f72DFeDF6ba1BcBFE77A94a752C529Bb4429E#code">0x3e7f72DFeDF6ba1BcBFE77A94a752C529Bb4429E</a></td></tr><tr><td>ProjectRegistry</td><td><a href="https://etherscan.io/address/0x03506eD3f57892C85DB20C36846e9c808aFe9ef4#code">0x03506eD3f57892C85DB20C36846e9c808aFe9ef4</a></td></tr></tbody></table>
 
 #### Optimism Mainnet
 
-| Contract                              | Address                                    |
-| ------------------------------------- | ------------------------------------------ |
-| ProgramFactory                        | 0x8918401DD47f1645fF1111D8E513c0404b84d5bB |
-| ProgramImplementation                 | 0x809E751e5C5bB1446e9ab2Ac37c687a35DE53BC6 |
-| QuadraticFundingVotingStrategyFactory | 0xE1F4A28299966686c689223Ee7803258Dbde0942 |
-| QFVotingStrategyImplementation        | 0xB70aCf9654fe304CfE24ee2fA9302a987d22c31e |
-| RoundFactory                          | 0x0f0A4961274A578443089D06AfB9d1fC231A5a4D |
-| RoundImplementation                   | 0xCd5AbD09ee34BA604795F7f69413caf20ee0Ab60 |
-| ProjectRegistry                       | 0x8e1bD5Da87C14dd8e08F7ecc2aBf9D1d558ea174 |
+<table><thead><tr><th width="373">Contract</th><th>Address</th></tr></thead><tbody><tr><td>ProgramFactory</td><td>0x8918401DD47f1645fF1111D8E513c0404b84d5bB</td></tr><tr><td>ProgramImplementation</td><td>0x809E751e5C5bB1446e9ab2Ac37c687a35DE53BC6</td></tr><tr><td>QuadraticFundingVotingStrategyFactory</td><td>0xE1F4A28299966686c689223Ee7803258Dbde0942</td></tr><tr><td>QFVotingStrategyImplementation</td><td>0xB70aCf9654fe304CfE24ee2fA9302a987d22c31e</td></tr><tr><td>RoundFactory</td><td>0x0f0A4961274A578443089D06AfB9d1fC231A5a4D</td></tr><tr><td>RoundImplementation</td><td>0xCd5AbD09ee34BA604795F7f69413caf20ee0Ab60</td></tr><tr><td>ProjectRegistry</td><td>0x8e1bD5Da87C14dd8e08F7ecc2aBf9D1d558ea174</td></tr></tbody></table>
 
 #### Fantom Mainnet
 

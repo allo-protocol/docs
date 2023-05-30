@@ -14,10 +14,7 @@ The init function needs to be called by a RoundImplementation.
 
 #### Behaviors&#x20;
 
-| Status  | Response                         | Notes                                                                                              |
-| ------- | -------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Success |                                  | <p>roundAddress is set to msg.sender<br><br>tokenAddress is set to the token used by the round</p> |
-| Error   | "init: roundAddress already set" | Will be returned if this instance of the voting contract has already been initialized              |
+<table><thead><tr><th width="224">Status</th><th>Response</th><th>Notes</th></tr></thead><tbody><tr><td>Success</td><td></td><td>roundAddress is set to msg.sender<br><br>tokenAddress is set to the token used by the round</td></tr><tr><td>Error</td><td>"init: roundAddress already set"</td><td>Will be returned if this instance of the voting contract has already been initialized</td></tr></tbody></table>
 
 ### updateDistribution
 
@@ -27,9 +24,9 @@ Must be overwritten by inheriting contract.
 
 **Parameters**&#x20;
 
-| name                | type     | description                                                                                                                                                                                       |
-| ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| encodedDistribution | bytes\[] | encoded distribution information. The encoded data is a MetaPtr. For more information see the definition of MetaPtr on the [Project Registry](../project-registry.md#registering-a-project) page. |
+| name                | type     | description                                                                                                                                                                                     |
+| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| encodedDistribution | bytes\[] | encoded distribution information. The encoded data is a MetaPtr. For more information see the definition of MetaPtr on the [Project Registry](../project-registry/#registering-a-project) page. |
 
 ### isDistributionSet
 
