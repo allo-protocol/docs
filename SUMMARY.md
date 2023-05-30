@@ -31,3 +31,4 @@
 ## Extras
 
 * [Getting Involved](extras/getting-involved.md)
+* [Allo Improvement Proposals](extras/allo-improvement-proposals.md)
