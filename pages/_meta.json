@@ -4,9 +4,6 @@
 	"core-concepts": "Core Concepts",
 	"voting-strategy": "Voting Strategy",
 	"payout-strategy": "Payout Strategy",
-<<<<<<< HEAD
-=======
 	"project-registry": "Project Registry",
->>>>>>> 157ff73 (initial setup for nextra docs site)
 	"extras": "Extras"
 }
