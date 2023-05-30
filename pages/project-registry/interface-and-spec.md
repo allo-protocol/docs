@@ -10,7 +10,9 @@ This documentation covers methods and events available through the Project Regis
 
 ### getProjectOwners
 
-`function getProjectOwners(uint256 projectID) external view returns (address[])`
+```
+function getProjectOwners(uint256 projectID) external view returns (address[])
+```
 
 #### Behaviors&#x20;
 

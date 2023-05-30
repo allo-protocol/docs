@@ -1,6 +1,7 @@
 ---
 description: How do I add my project to the registry?
 ---
+import { Callout } from 'nextra/components'
 
 # Getting Started
 
@@ -24,11 +25,11 @@ The following sections contain scripts to help you register and update your proj
 
 ### Adding a Project
 
-To add a project, use the createProject(metaPtr) function. The script below adds a project to the Project Registry on Goerli.&#x20;
+To add a project, use the createProject(metaPtr) function. The script below adds a project to the Project Registry on Goerli.
 
-{% hint style="info" %}
-Your project id will be emitted when this transaction is completed successfully. You can find this in etherscan in the transaction details.
-{% endhint %}
+<Callout type="info">
+  Your project id will be emitted when this transaction is completed successfully. You can find this in etherscan in the transaction details.
+</Callout>
 
 ```typescript
 import { ethers } from "hardhat";
