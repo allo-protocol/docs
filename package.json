@@ -1,4 +1,12 @@
 {
+	"name": "Allo v2 Documentation",
+  "version": "0.0.1",
+  "description": "Documentation for the second version of Gitcoin's Allo Protocol",
+	"scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
 	"dependencies": {
 		"next": "^13.4.3",
 		"react": "^18.2.0",

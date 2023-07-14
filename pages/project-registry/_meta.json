@@ -1,5 +1,24 @@
 {
+	"index": "Introduction",
 	"getting-started": "Getting Started",
-	"interface-and-spec": "Interface and Spec",
-	"integrating-with-the-project-registry": "Integrating With the Project Registry"
+	"concepts": {
+		"type": "separator",
+		"title": "Core Concepts"
+	},
+	"identities": "Identities",
+	"anchors": "Anchors",
+	"roles": "Roles",
+	"guides": {
+		"type": "separator",
+		"title": "Guides"
+	},
+	"integrating-with-the-project-registry": "Integrating With the Project Registry",
+	"create-identity": "Creating an Identity",
+	"update-identity": "Updating an Identity",
+	"verify-roles-and-ownership": "Verifying Roles and Ownership",
+	"contract": {
+		"type": "separator",
+		"title": "Contract"
+	},
+	"interface-and-spec": "Interface and Spec"
 }

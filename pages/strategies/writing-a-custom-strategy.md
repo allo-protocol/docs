@@ -1,5 +1,11 @@
 # Writing a Custom Voting Strategy
 
+- Tutorial that walks through writing a custom strategy
+- Explain the 5 "components" of a strategy
+- use one of the library/pre-built components
+- implement at least one component in the strategy (not using a component)
+- using the tests from allo-v2
+
 ### Setting Up
 
 1. Fork the [allo-protocol/contracts](https://github.com/allo-protocol/contracts) repo.

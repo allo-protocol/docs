@@ -1,0 +1,19 @@
+{
+	"index": "Overview",
+	"concepts": {
+		"type": "separator",
+		"title": "Core Concepts"
+	},
+	"pool": "Pool",
+	"allocation-strategy": "Allocation Strategy",
+	"project-registry": "Project Registry",
+	"aqueduct": "Aqueduct",
+	"extra": {
+		"type": "separator",
+		"title": "Extras"
+	},
+	"contracts": "Contracts",
+	"subgraph": "Subgraph",
+	"allo-improvement-proposals": "Allo Improvement Proposals",
+	"getting-involved": "Getting Involved"
+}

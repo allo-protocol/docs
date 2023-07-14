@@ -1,0 +1,24 @@
+{
+	"index": "Overview",
+	"writing-a-custom-strategy": "Writing A Custom Strategy",
+	"concepts": {
+		"type": "separator",
+		"title": "Core Concepts"
+	},
+	"allocation": "Allocation",
+	"recipient-eligibility": "Recipient Eligibility",
+	"voter-eligibility": "Voter Eligibility",
+	"voting": "Voting",
+	"distribution": "Distribution",
+	"guides": {
+		"type": "separator",
+		"title": "Guides"
+	},
+	"security-considerations": "Security Considerations", 
+	"contracts": {
+		"type": "separator",
+		"title": "Contracts"
+	},
+	"interface": "Strategy Interface",
+	"library": "Library"
+}

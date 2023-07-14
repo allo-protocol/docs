@@ -1,9 +1,27 @@
 {
-	"index": "Start Here",
-	"getting-started": "Getting Started",
-	"core-concepts": "Core Concepts",
-	"voting-strategy": "Voting Strategy",
-	"payout-strategy": "Payout Strategy",
-	"project-registry": "Project Registry",
-	"extras": "Extras"
+	"index": {
+		"title": "Introduction",
+		"type": "page",
+		"display": "hidden"
+	},
+	"overview": {
+		"title": "Overview",
+		"type": "page"
+	},
+	"allo": {
+		"title": "Allo",
+		"type": "page"
+	},
+	"strategies": {
+		"title": "Strategies",
+		"type": "page"
+	},
+	"project-registry": {
+		"title": "Project Registry",
+		"type": "page"
+	},
+	"blog": {
+		"title": "Blog",
+		"type": "page"
+	}
 }
