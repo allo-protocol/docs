@@ -1,6 +1,6 @@
 # Verify Roles and Ownership
 
-- When writing a strategy, you may want to check that an address (i.e.
+*   When writing a strategy, you may want to check that an address (i.e.
     `msg.sender` is an admin or owner of an identity)
 
 ```solidity

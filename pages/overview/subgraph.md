@@ -1,12 +1,17 @@
----
-description: How to access data indexed by The Graph
----
+***
+
+## description: How to access data indexed by The Graph
 
 # Subgraph
 
-The Allo protocol team maintains two subgraphs to make accessing data from the protocol easier.
+The Allo protocol team maintains two subgraphs to make accessing data from the
+protocol easier.
 
-> **Note:** We currently maintain two, separate subgraphs: one for the [Project Registry](../core-concepts/project-registry/) and a second for [Programs](../core-concepts/program.md) and [Rounds](../core-concepts/round.md). These may be merged into a single subgraph in the future.
+> **Note:** We currently maintain two, separate subgraphs: one for the [Project
+> Registry](../core-concepts/project-registry/) and a second for
+> [Programs](../core-concepts/program.md) and
+> [Rounds](../core-concepts/round.md). These may be merged into a single
+> subgraph in the future.
 
 ### Project Registry
 

@@ -18,7 +18,7 @@ docs.
 
 Fork and clone this repository first, then run the following:
 
-```sh 
+```sh
 pnpm install
 ```
 

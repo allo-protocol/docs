@@ -1,6 +1,6 @@
----
-description: Where can you find the Allo Protocol on-chain?
----
+***
+
+## description: Where can you find the Allo Protocol on-chain?
 
 # Contracts
 
@@ -24,4 +24,3 @@ the Allo Protocol team.
 | Fantom  | [etherscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code)  |  [etherscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code) |
 | Celo | [celoscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code)  |  [celoscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code) |
 | Arbitrum | [etherscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code)  |  [etherscan](https://etherscan.io/address/0xe0281a20dFaCb0E179E6581c33542bC533DdC4AB#code) |
-

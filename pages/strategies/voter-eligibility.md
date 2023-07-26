@@ -1,3 +1,3 @@
 # Voter Eligibility
 
-- who gets to vote and why?
+*   who gets to vote and why?

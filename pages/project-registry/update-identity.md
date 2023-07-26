@@ -2,7 +2,7 @@
 
 ## Updating Name
 
-- Regenerates the anchor!
+*   Regenerates the anchor!
 
 ```solidity
     function updateIdentityName(bytes32 _identityId, string memory _name)

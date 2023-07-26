@@ -1,3 +1,3 @@
 # Distribution
 
-- What distribution mechanism are you using?
+*   What distribution mechanism are you using?

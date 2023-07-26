@@ -1,3 +1,3 @@
 # Allocation
 
-- What allocation mechanism are you using?
+*   What allocation mechanism are you using?
