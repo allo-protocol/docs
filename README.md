@@ -7,9 +7,9 @@ in contributing to the documentation.
 
 ## Overview
 
-This project uses [Nextra](Nextra), a framework based on Next.js for building
-documentation sites. If you're familiar with Next.js, the learning curve to
-contributing to the docs is pretty small.
+This project uses [Nextra](https://nextra.site/), a framework based on Next.js
+for building documentation sites. If you're familiar with Next.js, the learning
+curve to contributing to the docs is pretty small.
 
 Follow through the rest of this repository to get set up and contributing to the
 docs.
