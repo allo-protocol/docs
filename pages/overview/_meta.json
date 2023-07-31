@@ -7,7 +7,7 @@
 	"pool": "Pool",
 	"allocation-strategy": "Allocation Strategy",
 	"project-registry": "Project Registry",
-	"aqueduct":{
+	"aqueduct": {
 		"title": "Aqueduct",
 		"display": "hidden"
 	},
