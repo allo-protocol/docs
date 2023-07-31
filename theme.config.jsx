@@ -8,7 +8,7 @@ export default {
     key: '',
     text: (
       <a href="https://github.com/allo-protocol/allo-v2/" target="_blank" rel="noreferrer">
-        Allo v2 is under active development. Learn more →
+        🚧 Allo v2 is under active development. Learn more →
       </a>
     )
   }
