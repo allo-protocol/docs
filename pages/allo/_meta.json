@@ -1,12 +1,28 @@
 {
 	"index": "Overview",
-	"flow-of-funds": "Flow of Funds",
-	"building-on-allo": "Building on Allo",
+	"flow-of-funds":{
+		"title": "Flow of Funds",
+		"display": "hidden"
+	},
+	"building-on-allo":{
+		"title": "Building On Allo",
+		"display": "hidden"
+	},
 	"concepts": {
 		"type": "separator",
-		"title": "Allo Core"
+		"title": "Allo Core",
+		"display": "hidden"
 	},
-	"working-with-pools": "Working with Pools",
-	"pool-roles": "Pool Roles",
-	"fees": "Fees"
+	"working-with-pools":{
+		"title": "Working with Pools",
+		"display": "hidden"
+	},
+	"pool-roles": {
+		"title": "Pool Roles",
+		"display": "hidden"
+	},
+	"fees": {
+		"title": "Fees",
+		"display": "hidden"
+	}
 }
