@@ -11,12 +11,6 @@ import { Card, Cards } from "nextra-theme-docs";
   The voting strategy contract must be deployed prior to the round implementation that will call it.
 </Callout>
 
-### Getting Started with Quadratic Funding
-
-For grant programs who wish to use quadratic funding, steps for deploying the
-quadratic funding voting strategy are available in the [github
-documentation](https://github.com/Allo-Protocol/contracts/blob/main/docs/DEPLOY\_STEPS.md#votingstrategy-setup).
-
 ### Getting Started with a Custom Strategy
 
 The Allo protocol voting strategy is designed to be highly customizable.  Allo
@@ -24,7 +18,12 @@ provides a basic interface that all voting contracts must inherit from where the
 vote function is intentionally left blank. This guide will help you to plan and
 execute the voting strategy for your program.
 
-#### Planning Your Voting Strategy
+#### Planning Your Allocation Strategy
+
+1. Who can receive funding?
+2. Who can allocate funding?
+3. How are payouts calculated?
+4. How are payouts distributed?
 
 Voting strategies can be built to meet any program requirements. Some common
 considerations and examples of solutions are outlined below.
@@ -45,6 +44,11 @@ considerations and examples of solutions are outlined below.
   * Because the voting strategy contract is initialized by a RoundImplementation, voting strategy should be deployed first.
 * Security
   * Security is crucial to any smart contract. See the [Security Considerations](security-considerations.md) page for more details.
+
+### Strategy Library
+
+- What is the strategy library? What is included? 
+- Link to the strategy library
 
 ### Next Steps
 

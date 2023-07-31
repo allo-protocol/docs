@@ -1,4 +1,12 @@
 {
 	"index": "Overview",
-	"flow-of-funds": "Flow of Funds"
+	"flow-of-funds": "Flow of Funds",
+	"building-on-allo": "Building on Allo",
+	"concepts": {
+		"type": "separator",
+		"title": "Allo Core"
+	},
+	"working-with-pools": "Working with Pools",
+	"pool-roles": "Pool Roles",
+	"fees": "Fees"
 }

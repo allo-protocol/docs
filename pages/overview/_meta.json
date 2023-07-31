@@ -13,7 +13,7 @@
 		"title": "Extras"
 	},
 	"contracts": "Contracts",
-	"subgraph": "Subgraph",
+	"indexers": "Indexers",
 	"allo-improvement-proposals": "Allo Improvement Proposals",
 	"getting-involved": "Getting Involved"
 }

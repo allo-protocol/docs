@@ -1,8 +1,10 @@
-***
+---
+description: How to access data indexed by The Graph
+---
 
-## description: How to access data indexed by The Graph
+# Indexers
 
-# Subgraph
+## Subgraph
 
 The Allo protocol team maintains two subgraphs to make accessing data from the
 protocol easier.

@@ -5,10 +5,9 @@
 		"type": "separator",
 		"title": "Core Concepts"
 	},
+	"recipients": "Recipients",
 	"allocation": "Allocation",
-	"recipient-eligibility": "Recipient Eligibility",
-	"voter-eligibility": "Voter Eligibility",
-	"voting": "Voting",
+	"payouts": "Payouts",
 	"distribution": "Distribution",
 	"guides": {
 		"type": "separator",
