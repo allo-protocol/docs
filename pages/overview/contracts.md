@@ -1,6 +1,6 @@
-***
-
-## description: Where can you find the Allo Protocol on-chain?
+---
+description: Where can you find the Allo Protocol on-chain?
+---
 
 # Contracts
 

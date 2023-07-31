@@ -16,7 +16,10 @@
 		"title": "Extras"
 	},
 	"contracts": "Contracts",
-	"indexers": "Indexers",
+	"indexers": {
+		"title": "Indexers",
+		"display": "hidden"
+	},
 	"allo-improvement-proposals": "Allo Improvement Proposals",
 	"getting-involved": "Getting Involved"
 }
