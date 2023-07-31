@@ -22,6 +22,7 @@
 	},
 	"blog": {
 		"title": "Blog",
-		"type": "page"
+		"type": "page",
+		"display": "hidden"
 	}
 }

@@ -1,23 +1,47 @@
 {
 	"index": "Overview",
-	"writing-a-custom-strategy": "Writing A Custom Strategy",
+	"writing-a-custom-strategy":{
+		"title": "Writing a Custom Strategy",
+		"display": "hidden"
+	},
 	"concepts": {
 		"type": "separator",
-		"title": "Core Concepts"
+		"title": "Core Concepts",
+		"display": "hidden"
 	},
-	"recipients": "Recipients",
-	"allocation": "Allocation",
-	"payouts": "Payouts",
-	"distribution": "Distribution",
+	"recipients":{
+		"title": "Recipients",
+		"display": "hidden"
+	},
+	"allocation":{
+		"title": "Allocation",
+		"display": "hidden"
+	},
+	"payouts":{
+		"title": "Payouts",
+		"display": "hidden"
+	},
+	"distribution":{
+		"title": "Distribution",
+		"display": "hidden"
+	},
 	"guides": {
 		"type": "separator",
-		"title": "Guides"
+		"title": "Guides",
+		"display": "hidden"
 	},
-	"security-considerations": "Security Considerations", 
+	"security-considerations":{
+		"title": "Security Considerations",
+		"display": "hidden"
+	},
 	"contracts": {
 		"type": "separator",
 		"title": "Contracts"
 	},
-	"interface": "Strategy Interface",
-	"library": "Library"
+	"interface":{
+		"title": "Interface"
+	},
+	"library":{
+		"title": "Library"
+	}
 }

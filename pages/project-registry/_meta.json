@@ -2,22 +2,47 @@
 	"index": "Introduction",
 	"concepts": {
 		"type": "separator",
-		"title": "Core Concepts"
+		"title": "Core Concepts",
+		"display": "hidden"
 	},
-	"identities": "Identities",
-	"anchors": "Anchors",
-	"roles": "Roles",
+	"identities":{
+		"title": "Identities",
+		"display": "hidden"
+	},
+	"anchors":{
+		"title": "Anchors",
+		"display": "hidden"
+	},
+	"roles":{
+		"title": "Roles",
+		"display": "hidden"
+	},
 	"guides": {
 		"type": "separator",
-		"title": "Guides"
+		"title": "Guides",
+		"display": "hidden"
 	},
-	"integrating-with-the-project-registry": "Integrating With the Project Registry",
-	"create-identity": "Creating an Identity",
-	"update-identity": "Updating an Identity",
-	"verify-roles-and-ownership": "Verifying Roles and Ownership",
+	"integrating-with-the-project-registry":{
+		"title": "Integrating with the Project Registry",
+		"display": "hidden"
+	},
+	"create-identity":{
+		"title": "Creating an Identity",
+		"display": "hidden"
+	},
+	"update-identity":{
+		"title": "Updating an Identity",
+		"display": "hidden"
+	},
+	"verify-roles-and-ownership":{
+		"title": "Verifying Roles and Ownership",
+		"display": "hidden"
+	},
 	"contract": {
 		"type": "separator",
 		"title": "Contract"
 	},
-	"interface-and-spec": "Interface and Spec"
+	"interface-and-spec":{
+		"title": "Interface and Spec"
+	}
 }
