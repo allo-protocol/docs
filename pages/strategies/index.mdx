@@ -9,9 +9,9 @@ import { Card, Cards } from "nextra-theme-docs";
 
 Allo V2 uses a single strategy contract to handle all logic around recipients, allocations, and token distribution. Developers can choose to create a custom strategy or clone an existing strategy.
 Allo provides a BaseStrategy that all strategies will inherit from. For more information, see the [Writing a Custom Strategy](/writing-a-custom-strategy.md) page.
-Strategies must be created prior to creating a new pool and will be called by the Allo.sol contract.
+Strategies must be created prior to creating a new pool and will be called by the ```Allo.sol``` contract.
 
-To help illustrate strategy concepts, this documentation will refer to the [Donation Voting](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting) strategy as an example. 
+To help illustrate strategy concepts, this documentation will refer to the [```DonationVotingStrategy.sol```](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting) strategy as an example. 
 
 ### Recipients
 Recipients refer to groups or individuals who can receive allocations from the pool. 
@@ -22,21 +22,21 @@ At a minimum, the recipient logic should consider:
 * How recipients will be identified
 * Any additional data that is required for a recipient to be registered and eventually receive funds
 
-The registerRecipient function is inherited from the BaseStrategy contract and needs to be completed in a custom strategy.
+The ```registerRecipient``` function is inherited from the ```BaseStrategy.sol``` contract and needs to be completed in a custom strategy.
 
-In our Donation Voting example, recipients are identified by their wallet address and are required to submit an application that is then reviewed by the pool manager.
+In the ```DonationVotingStrategy.sol``` example, recipients are identified by their wallet address and are required to submit an application that is then reviewed by the pool manager.
 Applications are only accepted during a specified time period. Upon submission, the recipient is in a 'Pending' status, and after review are either 'Accepted' or 'Rejected'.
 
 ### Allocations
 Allocation logic determines how and when allocators can express opinions about distributing the pool's funds to recipients. 
-Allocators are wallet addresses that are able to utilize the allocate function. Each strategy will need to determine what makes a wallet eligibile to be an allocator.
+Allocators are wallet addresses that are able to utilize the ```allocate``` function. Each strategy will need to determine what makes a wallet eligibile to be an allocator.
 Allocation can be as complex or simple as needed for a given strategy. 
 Some common considerations include:
 * Is there a certain time period allocation can occur during?
 * Can an allocator allocate multiple times?
 * Does allocation require funds to be sent, and if so where are they stored?
 
-The Donation Voting strategy marks all addresses as eligible and they may allocate multiple times. 
+The ```DonationVotingStrategy.sol``` contract marks all addresses as eligible and they may allocate multiple times. 
 Allocation involves donating pre-approved tokens to the recipient. 
 Allocation can only occur during a specified allocation window.
 
@@ -48,9 +48,9 @@ Payout logic may include:
 * Ensuring payout eligibility and accuracy
 * Managing who can initiate a payout
 
-Payouts are handled through the distribute function.
+Payouts are handled through the ```distribute``` function.
 
-Donation Voting allows anyone to distribute funds, as long as a pool manager has determined the funds are ready for payout.
+The ```DonationVotingStrategy.sol``` contract allows anyone to distribute funds, as long as a pool manager has determined the funds are ready for payout.
 It also includes the capability to reclaim undistributed funds 30 days after allocation has ended. 
 
 ### Strategy Library
