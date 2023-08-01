@@ -7,8 +7,8 @@ export default {
   banner: {
     key: '',
     text: (
-      <a href="https://github.com/allo-protocol/allo-v2/" target="_blank" rel="noreferrer">
-        Allo v2 is under active development. Learn more →
+      <a href="/#current-status" target="_blank" rel="noreferrer">
+        🚧 Allo v2 is under active development. Learn more →
       </a>
     )
   }
