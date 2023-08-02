@@ -40,9 +40,11 @@
 	},
 	"contract": {
 		"type": "separator",
-		"title": "Contract"
+		"title": "Contract",
+		"display": "hidden"
 	},
 	"interface-and-spec":{
-		"title": "Interface and Spec"
+		"title": "Interface",
+		"display": "hidden"
 	}
 }
