@@ -95,3 +95,6 @@ The fee is determined through [Gitcoin's
 governance](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358)
 process and uses GTC as the voting token.
 
+<!-- Further reading:
+
+* [Fees](/allo/fees) -->
