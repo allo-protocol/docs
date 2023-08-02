@@ -9,13 +9,13 @@ import { Card, Cards } from "nextra-theme-docs";
 
 Allo uses a single strategy contract to handle all logic around recipients,
 allocations, and token distribution. Developers can choose to create a custom
-strategy or clone an existing strategy. Allo provides a BaseStrategy that all
-strategies will inherit from. For more information, see the [Writing a Custom
-Strategy](/writing-a-custom-strategy.md) page. Strategies must be created prior
-to creating a new pool and will be called by the `Allo.sol` contract.
+strategy or clone an existing one. Allo provides a `BaseStrategy` that all
+strategies should inherit from. For more information, see the [Writing a Custom
+Strategy](/strategies/writing-a-custom-strategy) page. Strategies must be
+deployed prior to creating a new pool.
 
 To help illustrate strategy concepts, this documentation will refer to the
-[`DonationVotingStrategy.sol`https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting)
+[`DonationVotingStrategy.sol`](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting)
 strategy as an example. 
 
 ### Recipients
@@ -45,7 +45,7 @@ review are either 'Accepted' or 'Rejected'.
 Allocation logic determines how and when allocators can express opinions about
 distributing the pool's funds to recipients. Allocators are wallet addresses
 that are able to utilize the `allocate` function. Each strategy will need to
-determine what makes a wallet eligibile to be an allocator. Allocation can be as
+determine what makes a wallet eligible to be an allocator. Allocation can be as
 complex or simple as needed for a given strategy. 
 
 Some common considerations include:
@@ -65,7 +65,7 @@ Finally, strategies need to determine how payouts are handled for recipients.
 
 Payout logic may include:
 
-* Caluclating payout amounts
+* Calculating payout amounts
 * Determining when and how often payouts occur
 * Ensuring payout eligibility and accuracy
 * Managing who can initiate a payout
