@@ -39,7 +39,8 @@
 		"title": "Contracts"
 	},
 	"interface":{
-		"title": "Interface"
+		"title": "Interface",
+		"display": "hidden"
 	},
 	"library":{
 		"title": "Strategy Library"
