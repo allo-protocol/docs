@@ -1,70 +1,86 @@
 ---
-description: How do I begin creating a Voting Strategy?
+description: What do I need to know about strategies?
 ---
 
 import { Callout } from 'nextra/components'
 import { Card, Cards } from "nextra-theme-docs";
 
-# Getting Started
+# Introduction 
 
-<Callout type="info">
-  The voting strategy contract must be deployed prior to the round implementation that will call it.
-</Callout>
+Allo uses a single strategy contract to handle all logic around recipients,
+allocations, and token distribution. Developers can choose to create a custom
+strategy or clone an existing one. Allo provides a `BaseStrategy` that all
+strategies should inherit from. For more information, see the [Writing a Custom
+Strategy](/strategies/writing-a-custom-strategy) page. Strategies must be
+deployed prior to creating a new pool.
 
-### Getting Started with a Custom Strategy
+To help illustrate strategy concepts, this documentation will refer to the
+[`DonationVotingStrategy.sol`](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting)
+strategy as an example. 
 
-The Allo protocol voting strategy is designed to be highly customizable.  Allo
-provides a basic interface that all voting contracts must inherit from where the
-vote function is intentionally left blank. This guide will help you to plan and
-execute the voting strategy for your program.
+### Recipients
 
-#### Planning Your Allocation Strategy
+Recipients refer to groups or individuals who can receive allocations from the
+pool. Strategy logic determines how eligible recipients are identified and
+registered.
 
-1. Who can receive funding?
-2. Who can allocate funding?
-3. How are payouts calculated?
-4. How are payouts distributed?
+At a minimum, the recipient logic should consider:
 
-Voting strategies can be built to meet any program requirements. Some common
-considerations and examples of solutions are outlined below.
+* How recipient eligibility is determined
+* What statuses a recipient may need to go through when registering
+* How recipients will be identified
+* Any additional data that is required for a recipient to be registered and eventually receive funds
 
-* Voting eligibility
-  * Who is allowed to vote? Voting can be limited to holders of an NFT or token, specific wallet addresses, or open to anyone.
-* Voting frequency
-  * How many times can a single address vote? This can be role based, dependent on how many tokens are held, or limited to a single vote.
-  * It is also worth considering whether votes can happen in bulk or one at a time
-* Weighted voting
-  * Do some votes have more value than others? Holders of specific NFTs may have more voting power than others.
-  * In quadratic funding, the voting weight is dependent on the total number of contributors to that project, the moree contributors the higher the weight.
-* Architecture
-  * Will all functionality be contained in the voting strategy contract? Some implementations use the vote function as a pass through to other smart contracts. This can be useful if your platform allows an action, such as minting an NFT, and you want to incorporate that into the vote.
-* Rounds
-  * Keep in mind that your voting strategy contract should not be called directly. Instead, voting will call the Round contract vote function which will then call the voting strategy contract.
-  * Each voting strategy implementation is unique to a round. If your program will have multiple rounds, keep in mind how contracts for future rounds will be deployed.
-  * Because the voting strategy contract is initialized by a RoundImplementation, voting strategy should be deployed first.
-* Security
-  * Security is crucial to any smart contract. See the [Security Considerations](security-considerations.md) page for more details.
+The `registerRecipient` function is inherited from the
+`BaseStrategy.sol` contract and needs to be completed in a custom strategy.
+
+In the `DonationVotingStrategy.sol` example, recipients are identified by
+their wallet address and are required to submit an application that is then
+reviewed by the pool manager. Applications are only accepted during a specified
+time period. Upon submission, the recipient is in a 'Pending' status, and after
+review are either 'Accepted' or 'Rejected'.
+
+### Allocations
+
+Allocation logic determines how and when allocators can express opinions about
+distributing the pool's funds to recipients. Allocators are wallet addresses
+that are able to utilize the `allocate` function. Each strategy will need to
+determine what makes a wallet eligible to be an allocator. Allocation can be as
+complex or simple as needed for a given strategy. 
+
+Some common considerations include:
+
+* Is there a certain time period allocation can occur during?
+* Can an allocator allocate multiple times?
+* Does allocation require funds to be sent, and if so where are they stored?
+
+The `DonationVotingStrategy.sol` contract marks all addresses as eligible
+and they may allocate multiple times. Allocation involves donating pre-approved
+tokens to the recipient. Allocation can only occur during a specified allocation
+window.
+
+### Token Distribution
+
+Finally, strategies need to determine how payouts are handled for recipients. 
+
+Payout logic may include:
+
+* Calculating payout amounts
+* Determining when and how often payouts occur
+* Ensuring payout eligibility and accuracy
+* Managing who can initiate a payout
+
+Payouts are handled through the `distribute` function.
+
+The `DonationVotingStrategy.sol` contract allows anyone to distribute funds,
+as long as a pool manager has determined the funds are ready for payout. It also
+includes the capability to reclaim undistributed funds 30 days after allocation
+has ended. 
 
 ### Strategy Library
 
-- What is the strategy library? What is included? 
-- Link to the strategy library
+The [Strategy
+Library](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies)
+includes a variety of strategy contracts. These contracts can be used as is or
+as a starting point for a custom strategy.
 
-### Next Steps
-
-Check out these pages
-
-<Cards>
-  <Card
-    title="Interface and Spec"
-    href="/voting-strategy/interface-and-spec"
-  />
-  <Card
-    title="Writing a Custom Voting Strategy"
-    href="/voting-strategy/writing-a-custom-voting-strategy"
-  />
-  <Card
-    title="Security Considerations"
-    href="/voting-strategy/security-considerations"
-  />
-</Cards>
