@@ -7,3 +7,18 @@ Technical guide for working with pools. Key things to cover are:
 
 This page should include code snippets in JS for how to interact with these
 methods
+
+## Pools, In-depth
+
+Pools have a few important pieces of data to them:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `identityId` | `bytes32` | A unique ID for representing each pool |
+| `strategy` | `IStrategy` | An allocation strategy |
+| `token` | `address` | The token to be distributed |
+| `amount` | `uint256` | The number of tokens to be distributed |
+| `metadata` | `Metadata` | Offchain metadata for a pool |
+| `managerRole` | `bytes32` | Bytes 32 string representing the OpenZeppelin role for managing the pool |
+| `adminRole` | `bytes32` | Bytes 32 string representing the OpenZeppelin role for the admin of the pool |
+
