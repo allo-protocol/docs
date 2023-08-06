@@ -15,7 +15,7 @@
 	},
 	"working-with-pools":{
 		"title": "Working with Pools",
-		"display": "hidden"
+		"display": "visible"
 	},
 	"pool-roles": {
 		"title": "Pool Roles",
