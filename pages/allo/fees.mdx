@@ -1,4 +1,26 @@
 # Fees
+Allo collects a fee on each pool that is created through the protocol. There 
+are two fee mechanisms, a base fee and a percentage fee.
 
-Explain what the fee is (2.5%?) how it's calculated and taken on matching pool
-funds
+### Base Fee
+The base fee is a fixed amount that is charged when a pool is created. The base
+fee must be paid in ETH and should be included in the msg.value when calling 
+`createPool()`.
+
+The base fee amount can be checked by calling `getBaseFee()`. At time of 
+writing, the base fee is set to 0 ETH. 
+
+### Percentage Fee
+The percentage fee is determined by the amount of funding in the pool and is 
+charged when the pool is funded. The fee will be deducted from the funding 
+amount. 
+
+For example, if `fundPool()` is called with 1 ETH as the amount, .025 ETH will 
+be deducted from the amount as the fee. The remaining .975 ETH will be used to 
+fund the pool.
+
+The percentage fee amount can be checked by calling `getFeePercentage()`. At 
+time of writing the percentage fee is 2.5%. 
+
+### Fee Governance
+Fee amounts are determined through the [Gitcoin DAO governance process](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358).

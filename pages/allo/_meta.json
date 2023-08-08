@@ -23,6 +23,6 @@
 	},
 	"fees": {
 		"title": "Fees",
-		"display": "hidden"
+		"display": "visible"
 	}
 }
