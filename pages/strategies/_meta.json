@@ -11,7 +11,7 @@
 	},
 	"recipients":{
 		"title": "Recipients",
-		"display": "hidden"
+		"display": "visible"
 	},
 	"allocation":{
 		"title": "Allocation",
