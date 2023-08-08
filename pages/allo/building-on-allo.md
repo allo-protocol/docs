@@ -1,5 +1,7 @@
 # Building on Allo
 
+## Introduction
+
 This page walks through the core methods in `Allo.sol` and how to interact with
 them. If you're building an application or product on top of Allo protocol, most
 of the interactions your application has with Allo will be through this
@@ -13,13 +15,25 @@ In addition to this document, you should review the
 page. Combined, the three documents should give you a good idea of the code
 you'll need to write to integrate your application with Allo. If you are also
 interacting with the Registry, then also review [Integrating with the Project
-Register](/project-registry/integrating-with-the-project-registry).
+Registery](/project-registry/integrating-with-the-project-registry).
 
-Finally, this document also serves as a companion to the [Flow of
-Funds](/allo/flow-of-funds) page, which walks through the life cycle of a pool
-in Allo. Whereas that page gives a high level overview, this one provides more
-in-depth technical information and is aimed at developers building on the
-protocol.
+## How to use this page
+
+This document serves as a companion to the [Flow of Funds](/allo/flow-of-funds)
+page, which walks through the life cycle of a pool in Allo. Whereas that page
+gives a high level overview, this one provides more in-depth technical
+information and is aimed at developers building on the protocol.
+
+Our aim is that Allo is a general purpose protocol for allocating resources
+onchain. That means that Allo implements a set of general-purpose methods that
+are quite abstract. How you end up using them in your application will depend
+a lot on what you're building. This page should help you understand the Allo
+core contract (`Allo.sol`) enough to build your own application on top of it. To
+aid in that understanding, this page seeks to do two things:
+
+1. Generally describe each of the core methods and how to use them
+2. Specifically walk through how each method would get used in an example
+   application
 
 ## Creating a Pool
 
@@ -36,7 +50,9 @@ function createPool(
     Metadata memory _metadata,
     address[] memory _managers
 ) external payable returns (uint256 poolId)
+```
 
+```solidity
 function createPoolWithCustomStrategy(
     bytes32 _profileId,
     address _strategy,
@@ -72,6 +88,21 @@ A couple of other technical notes about creating a pool:
    not have all your funds together at the time you start soliciting recipients
    and grantees.
 
+<details>
+  <summary>How you might use this method:</summary>
+
+  **Direct Grants Application**
+
+  Let's say you're building an application that would allow a grants committee to
+  distribute pools of funding from their community's treasury. In this example,
+  you'd need to write a custom strategy and deploy it for each grants committee
+  created in your application. When the committee "signs up" for your application,
+  they'd create a profile in the [Registry](/project-registry) for their grants
+  committee. You'd then implement a process for them to create a pool using
+  `createPoolWithCustomStrategy`. Their community's governance system would fund
+  the pool by passing a proposal that cases `fundPool`.
+</details>
+
 ## Funding a Pool
 
 A pool can be funded at the same time that it is created and/or it can be funded
@@ -87,21 +118,24 @@ function fundPool(uint256 _poolId, uint256 _amount) external payable
 | `_poolId`  | The ID of the pool, returned by either `createPool` or `createPoolWithCustomStrategy` |
 | `_amount` | The amount that the caller would like to add to the pool balance |
 
-One couple of other technical notes about creating a pool:
+A couple of other technical notes about funding a pool:
 
-While only a member or owner of a profile can create a pool associated with that
-profile, anyone can fund the pool once it's created.
+1. While only a member or owner of a profile can create a pool associated with
+   that profile, anyone can fund the pool once it's created
+2. Some pools will be created and funded in a single transaction, created and
+   then funded later, or both (created and initially funded, then funded more
+   later)
 
 ## Registering a Recipient
 
 After a pool is created, but before allocation can begin, the allocation
 strategy needs a list of recipients.
 
-In Allo terms, recipients are people who receive funding from a pool on Allo.
-The nearest approximate term will depend on the use case you're building
-against: For Grants Stack, a product suite for running a Quadratic Funding
-grants program, the recipient is a grantee. For someone building an application
-for creating an distributing bounties, the recipients might be bounty hunters or
+In Allo terms, recipients are people who receive funding from a pool. The
+nearest approximate term will depend on the use case you're building against:
+For Grants Stack, a product suite for running a Quadratic Funding grants
+program, the recipient is a grantee. For someone building an application for
+creating and distributing bounties, the recipients might be bounty hunters or
 hackers. Recipient is meant as a general term for anyone receiving funding from
 a pool.
 
@@ -113,7 +147,8 @@ There are two methods for adding recipients, `registerRecipient` and
 
 ```solidity
 function registerRecipient(uint256 _poolId, bytes memory _data) external payable returns (address)
-
+```
+```solidity
 function batchRegisterRecipient(uint256[] memory _poolIds, bytes[] memory _data) external returns (address[] memory)
 ```
 
@@ -134,7 +169,63 @@ caller and the data expected by the allocation strategy contract should cause
 the transaction to revert.
 
 ## Allocating
-  - allocate / batchAllocate
+
+Allo uses the concept of "allocating" as a generalized term for deciding who
+should get funding from the pool. You can use the two allocate methods in
+`Allo.sol` in a variety of ways, depending on what you're building, including
+but not limited to:
+
+1. Voting with a token for who should receive funding
+2. Donating to a recipient (for example, in Quadratic Funding)
+3. Approving a grant with a fixed-amount to be distributed
+4. Rewarding a bounty to a bounty hunter
+
+As you can tell from these examples, the allocate method is quite abstract,
+pushing the meaning of allocating to your front end and particular allocation
+strategy. This means your front end could:
+
+1. Have a "donate" button that calls `allocate()`
+2. Have a "vote" button that calls `allocate()`
+3. Have a "grant" or "award" button that calls `allocate()`
+
+Check out the [Strategy Library](/strategies/library) for some of the ways the
+allocate method is used.
+
+Regardless of what allocating means in the context of your application, you'll
+do this by calling one of the two allocate methods, `allocate` and
+`batchAllocate`, which have the following function signatures:
+
+```solidity
+function allocate(uint256 _poolId, bytes memory _data) external payable
+```
+```solidity
+function batchAllocate(uint256[] calldata _poolIds, bytes[] memory _datas) external
+```
 
 ## Distributing
-  - distribute
+
+Once you've allocated tokens, you can distribute them using them to their
+recipients. Here, again, the functionality is part of the strategy, which is
+responsible for:
+
+* How much has been distributed
+* Which recipients have been allocated to but not distributed to
+* How much is left to distribute
+
+There is only one `distribute()` method, which has the following signature:
+
+```solidity
+function distribute(uint256 _poolId, address[] memory _recipientIds, bytes memory _data) external
+```
+
+| Parameter | Definition |
+| ---  | ---  |
+| `_poolId`  | The ID of the pool from which you'd like to distribute  |
+| `_recipientIds`  | List of recipient IDs to which you'd like to distribute tokens  |
+| `_data`  | Bytes encoded data to accompany the distribution, the structure of which is determiend by the allocation strategy |
+
+One technical thing to note:
+
+The Allo core contract (`Allo.sol`) does not track the amount distributed from
+a pool and so doesn't account for things like double-spending or over-spending.
+Your allocation strategy is responsible for these things.
