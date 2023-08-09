@@ -16,27 +16,27 @@ file in the contracts repository.
 
 | Contract | Address |
 | --- | --- |
-| Allo | `0x45F5506b0014cbdc9652854B65eed90E56aB7dA9` |
-| Allo Proxy | `0x97122901b6346a625294d446f5d0b7bc00a3b0f2` |
+| Allo | `0x8dde1922d5f772890f169714faceef9551791caf` |
+| Allo Proxy | `0x79536CC062EE8FAFA7A19a5fa07783BD7F792206` |
 
 | Network | Testnet | Mainnet |
 | ---  | ---  | ---  |
-| Public Goods Network  | [Sepolia Blockscout](https://explorer.sepolia.publicgoods.network/address/0x97122901b6346a625294d446f5d0b7bc00a3b0f2)  | `coming soon` |
-| Ethereum  | [Goerli Etherscan](https://goerli.etherscan.io/address/0x97122901b6346a625294d446f5d0b7bc00a3b0f2), [Sepolia Etherscan](https://sepolia.etherscan.io/address/0x97122901b6346a625294d446f5d0b7bc00a3b0f2)  | `coming soon` |
-| Optimism | [Sepolia Etherscan](https://goerli-optimism.etherscan.io/address/0x97122901b6346a625294d446f5d0b7bc00a3b0f2)  | `coming soon` |
-<!-- | Celo | [Celoscan]()  | `coming soon` | -->
+| Public Goods Network  | [Sepolia Blockscout](https://explorer.sepolia.publicgoods.network/address/0x8dde1922d5f772890f169714faceef9551791caf)  | `coming soon` |
+| Ethereum  | [Goerli Etherscan](https://goerli.etherscan.io/address/0x8dde1922d5f772890f169714faceef9551791caf), [Sepolia Etherscan](https://sepolia.etherscan.io/address/0x8dde1922d5f772890f169714faceef9551791caf)  | `coming soon` |
+| Optimism | [Goerli Etherscan](https://goerli-optimism.etherscan.io/address/0x8dde1922d5f772890f169714faceef9551791caf)  | `coming soon` |
+| Celo | [Celo Block Explorer](https://explorer.celo.org/alfajores/address/0x8dde1922d5f772890f169714faceef9551791caf)  | `coming soon` |
 <!-- | Arbitrum | [Etherscan]()  | `coming soon` | -->
 
 ### Registry
 
 | Contract | Address |
 | --- | --- |
-| Registry | `0xe571ec2C7b94dE72Bc01937a251E48780DEF882A` |
+| Registry | `0xAEc621EC8D9dE4B524f4864791171045d6BBBe27` |
 
 | Network | Testnet | Mainnet |
 | ---  | ---  | ---  |
-| Public Goods Network  | [Sepolia Blockscout](https://explorer.sepolia.publicgoods.network/address/0xe571ec2C7b94dE72Bc01937a251E48780DEF882A)  | `coming soon` |
-| Ethereum  | [Goerli Etherscan](https://goerli.etherscan.io/address/0xe571ec2C7b94dE72Bc01937a251E48780DEF882A), [Sepolia Etherscan](https://sepolia.etherscan.io/address/0xe571ec2C7b94dE72Bc01937a251E48780DEF882A)  | `coming soon` |
-| Optimism  | [Goerli Etherscan](https://goerli-optimism.etherscan.io/address/0xe571ec2C7b94dE72Bc01937a251E48780DEF882A)  | `coming soon` |
-<!-- | Celo | [Celoscan]()  | `coming soon` | -->
+| Public Goods Network  | [Sepolia Blockscout](https://explorer.sepolia.publicgoods.network/address/0xAEc621EC8D9dE4B524f4864791171045d6BBBe27)  | `coming soon` |
+| Ethereum  | [Goerli Etherscan](https://goerli.etherscan.io/address/0xAEc621EC8D9dE4B524f4864791171045d6BBBe27), [Sepolia Etherscan](https://sepolia.etherscan.io/address/0xAEc621EC8D9dE4B524f4864791171045d6BBBe27)  | `coming soon` |
+| Optimism  | [Goerli Etherscan](https://goerli-optimism.etherscan.io/address/0xAEc621EC8D9dE4B524f4864791171045d6BBBe27)  | `coming soon` |
+| Celo | [Celo Block Explorer](https://explorer.celo.org/alfajores/address/0xAEc621EC8D9dE4B524f4864791171045d6BBBe27)  | `coming soon` |
 <!-- | Arbitrum | [Etherscan]()  | `coming soon` | -->

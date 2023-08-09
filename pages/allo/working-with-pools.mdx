@@ -93,7 +93,9 @@ const amount = 0;
 const metadata = {protocol: 1, pointer: "strategy pointer"};
 const managers = ["your wallet here"];
 
-const tx = await allo.createPool(profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers);
+const tx = await allo.createPool(
+   profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers
+);
 await tx.wait();
 console.log(`Done! Transaction hash: ${tx.hash}`)
 ```
@@ -114,7 +116,9 @@ const amount = 0;
 const metadata = {protocol: 1, pointer: "strategy pointer"};
 const managers = ["your wallet here"];
 
-const tx = await allo.createPoolWithCustomStrategy(profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers);
+const tx = await allo.createPoolWithCustomStrategy(
+   profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers
+);
 await tx.wait();
 console.log(`Done! Transaction hash: ${tx.hash}`)
 ```

@@ -1,26 +1,39 @@
 {
 	"index": "Overview",
+	"concepts": {
+		"type": "separator",
+		"title": "Core Concepts"
+	},
+	"cloneable-strategies": {
+		"title": "Cloneable Strategies"
+	},
+	"pool-roles": {
+		"title": "Pool Roles"
+	},
+	"fees": {
+		"title": "Fees",
+		"display": "visible"
+	},
+	"guides": {
+		"type": "separator",
+		"title": "Guides"
+	},
 	"flow-of-funds":{
 		"title": "Flow of Funds"
 	},
 	"building-on-allo":{
 		"title": "Building On Allo"
 	},
-	"concepts": {
-		"type": "separator",
-		"title": "Allo Core",
-		"display": "hidden"
-	},
 	"working-with-pools":{
-		"title": "Working with Pools",
-		"display": "visible"
+		"title": "Working with Pools"
 	},
-	"pool-roles": {
-		"title": "Pool Roles",
-		"display": "hidden"
+	"contract": {
+		"type": "separator",
+		"title": "Contract"
 	},
-	"fees": {
-		"title": "Fees",
-		"display": "visible"
+	"code":{
+		"title": "Source Code",
+		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Allo.sol",
+		"newWindow": true
 	}
 }
