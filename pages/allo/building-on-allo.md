@@ -7,8 +7,8 @@ them. If you're building an application or product on top of Allo protocol, most
 of the interactions your application has with Allo will be through this
 contract. Ideally, `Allo.sol` is the *only* contract you have to interact with,
 but that will depend on your allocation strategy and there are cases where
-additional helper methods and functionality may be necessary for a particular
-allocation strategy to function.
+additional helper methods may be necessary for a particular allocation strategy
+to work.
 
 In addition to this document, you should review the
 [Contracts](/overview/contracts) page and the [Indexers](/overview/indexers)
@@ -87,21 +87,6 @@ A couple of other technical notes about creating a pool:
    is something you should account for as it is common in resource allocation to
    not have all your funds together at the time you start soliciting recipients
    and grantees.
-
-<details>
-  <summary>How you might use this method:</summary>
-
-  **Direct Grants Application**
-
-  Let's say you're building an application that would allow a grants committee to
-  distribute pools of funding from their community's treasury. In this example,
-  you'd need to write a custom strategy and deploy it for each grants committee
-  created in your application. When the committee "signs up" for your application,
-  they'd create a profile in the [Registry](/project-registry) for their grants
-  committee. You'd then implement a process for them to create a pool using
-  `createPoolWithCustomStrategy`. Their community's governance system would fund
-  the pool by passing a proposal that cases `fundPool`.
-</details>
 
 ## Funding a Pool
 
