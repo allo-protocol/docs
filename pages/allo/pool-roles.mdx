@@ -1,13 +1,17 @@
 # Pool Roles
-`Allo.sol` exposes two roles for managing pools, a pool manager and a pool admin.
 
-When a pool is created the admin and manager are set to msg.sender.
+`Allo.sol` exposes two roles for managing pools, a pool manager and a pool
+admin.
 
 ## Pool Admin
-The admin can reassign the pool manager using the `addPoolManager` and 
-`removePoolManager` functions.
+
+When a pool is created, the admin is set to the value of `msg.sender` (the
+caller of either method for creating a pool).
+
+The primary function of the admin is adding and removing pool managers.
 
 ## Pool Manager
+
 The pool manager has the ability to update the pool metadata using the 
 `updatePoolMetadata` function.
 
