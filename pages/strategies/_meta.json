@@ -1,9 +1,5 @@
 {
 	"index": "Overview",
-	"writing-a-custom-strategy":{
-		"title": "Writing a Custom Strategy",
-		"display": "hidden"
-	},
 	"concepts": {
 		"type": "separator",
 		"title": "Core Concepts",
@@ -28,6 +24,10 @@
 	"guides": {
 		"type": "separator",
 		"title": "Guides",
+		"display": "hidden"
+	},
+	"writing-a-custom-strategy":{
+		"title": "Writing a Custom Strategy",
 		"display": "hidden"
 	},
 	"security-considerations":{
