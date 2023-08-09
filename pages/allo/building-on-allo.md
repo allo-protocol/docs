@@ -149,7 +149,10 @@ There are two methods for adding recipients, `registerRecipient` and
 function registerRecipient(uint256 _poolId, bytes memory _data) external payable returns (address)
 ```
 ```solidity
-function batchRegisterRecipient(uint256[] memory _poolIds, bytes[] memory _data) external returns (address[] memory)
+function batchRegisterRecipient(
+   uint256[] memory _poolIds,
+   bytes[] memory _data
+) external returns (address[] memory)
 ```
 
 **Registering with a Pool's Allocation Strategy**
