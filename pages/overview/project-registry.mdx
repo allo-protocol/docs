@@ -7,22 +7,23 @@ import Image from 'next/image'
 # Project Registry
 
 The project registry is a universal, onchain registry of anyone receiving or
-distributing capital through Allo. Once registered, an identity can create pools
-of funding tied to that identity or apply to receive funding from another pool
-in Allo. Identities in the registry can do either and we imagine some identities
-will do both.
+distributing capital through Allo. Once registered, a project can create pools
+of funding tied to that profile or apply to receive funding from another pool in
+Allo. Profiles in the registry roughly equate to organizations and can
+distribute and/or receive funding in Allo. We imagine some projects will do
+both. We also imagine the registry of projects will be useful beyond Allo.
 
-The goal of the Registry to is help projects accrue reputation and easily find
+The goal of the Registry is to help projects accrue reputation and easily find
 new sources of funding or to distribute capital to meaningful projects.
 
-## Project Identities
+## Project Profiles
 
 When a project registers, it is given a unique address that it can use to
 represent itself onchain. This address can be used for many things, including:
 
 * Receiving funds distributed through an allocation strategy
 * Be the subject of an attestation (i.e. attesting to the project managers having been KYC'ed)
-* Hold an Soul-bound Token demonstrating that the project is a member of a larger community, like a DAO
+* Hold a Soul-bound Token demonstrating that the project is a member of a larger community, like a DAO
 
 Because projects are represented by addresses, allocation strategies can include
 automated eligibility checks - like checking that the balance of SBT.
