@@ -1,24 +1,120 @@
 # Working with Pools
-Pools handle the implemenataion of allocation and distribution strategies in 
-Allo. While the details of the allocation and distribution are contained in the
-strategy contract, those contracts should not be called directly. Instead, a 
-pool will be created that links to the strategy.
 
-Pool functions are contained in `Allo.sol` and an Allo proxy contract is 
-available to to receive requests. This means that to allocate funds according
-to the rules in a strategy you will call the `allocate` function in `Allo.sol` 
-and provide the pool id.
+Pools handle the implementation of allocation strategies in Allo. While the
+details of how a pool of funds will be allocated and distributed are reserved
+for the strategy contract, those contracts should not be called directly.
+Instead, a pool will be created that links to the strategy and all interactions
+with that strategy will happen through `Allo.sol`.
 
-## Pools, In-depth
+Pool functions are contained in `Allo.sol`. This means that to allocate funds
+according to the rules in a strategy you will call the `allocate()` function in
+`Allo.sol` and provide the pool id (for example).
 
-Pools have a few important pieces of data to them:
+## Pool Lifecycle
 
-| Property | Type | Description |
-| --- | --- | --- |
-| `identityId` | `bytes32` | A unique ID for representing each pool |
-| `strategy` | `IStrategy` | An allocation strategy |
-| `token` | `address` | The token to be distributed |
-| `amount` | `uint256` | The number of tokens to be distributed |
-| `metadata` | `Metadata` | Offchain metadata for a pool |
-| `managerRole` | `bytes32` | Bytes 32 string representing the OpenZeppelin role for managing the pool |
-| `adminRole` | `bytes32` | Bytes 32 string representing the OpenZeppelin role for the admin of the pool |
+Before creating a pool:
+
+1. Create and deploy a custom strategy, or choose a cloneable strategy.
+2. Register on the Project registry.
+3. Determine who the pool manager(s) will be.
+
+### Starting and Running a Pool
+
+1. Use the `createPool()` or `createPoolWithCustomStrategy()` function to
+   initialize the pool. The pool can be funded during initialization, or at
+   a later time using the `fundPool()` function. See the code samples in
+   [Creating a Pool](#creating-a-pool) for more details.
+
+2. Determine the recipients of the pool and add them using
+   `registerRecipient()`. What data is required to register a recipient will
+   depend on the underlying strategy. `Allo.sol` also provides
+   `batchRegisterRecipient()`, which will register a single recipient to
+   multiple pools. Both functions return the `recipientId`, which will be
+   needed for distributing funds.
+
+```javascript
+const tx = await allo.registerRecipient(poolId, bytes(""));
+
+const tx = await allo.batchRegisterRecipient(poolIds, bytes[]);
+```
+
+3. When allowed by the strategy contract, have allocators allocate funds using
+   `allocate()` or `batchAllocate()`. `batchAllocate()` is used to allocate
+   funds to multiple pools and may not be available for all strategies. The data
+   required to allocate funds will be determined by the underlying strategy.
+
+```javascript
+const tx = await allo.allocate(poolId, bytes(""));
+
+const tx = await allo.batchAllocate(poolIds, bytes[]);
+```
+
+4. Once allocation is complete, complete the pool's funds can be distributed
+   using `distribute()`. You will need the `recipientId` returned when they were
+   registered. Again, specifics of how distribute will behave is determined by
+   the strategy.
+
+```javascript
+const tx = await allo.distribute(
+    poolId, recipientIds[], bytes("")
+);
+
+const tx = await allo.batchAllocate(poolIds, bytes[]);
+```
+
+5. If any funds are remaining after distribution, use `recoverFunds()` to remove
+   them from the pool. Only the `poolOwner` is allowed to use `recoverFunds()`.
+
+```javascript
+const tx = await allo.recoverFunds(
+    tokenAddress, recipientAddress
+);
+```
+
+## Creating a Pool
+
+There are two methods available for creating a pool, `createPool()` and
+`createPoolWithCustomStrategy()`.
+
+### `createPool()`
+
+The `createPool()` function should be used when you want to use a cloneable
+strategy from the Allo library. An error will occur if the strategy address
+provided is not approved as a cloneable strategy.
+
+```javascript
+const allo = await ethers.getContractAt('Allo', alloProxyAddress, signer);
+
+const profileId = "registry profile id here";
+const strategyAddress = "cloneable strategy address";
+const initData = "0x";
+const tokenAddress = "0x7af963cf6d228e564e2a0aa0ddbf06210b38615d";     //Goerli test token
+const amount = 0;
+const metadata = {protocol: 1, pointer: "strategy pointer"};
+const managers = ["your wallet here"];
+
+const tx = await allo.createPool(profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers);
+await tx.wait();
+console.log(`Done! Transaction hash: ${tx.hash}`)
+```
+
+### `createPoolWithCustomStrategy()`
+
+`createPoolWithCustomStrategy()` can be used with custom strategies, as the name
+suggests. The strategy must be deployed before the pool is created. 
+
+```javascript
+const allo = await ethers.getContractAt('Allo', alloProxyAddress, signer);
+
+const profileId = "registry profile id here";
+const strategyAddress = "0x4AB4eF1aa0c2f63FFE77b245E679fb7B38681470";  //Donation Voting address
+const initData = "0x";
+const tokenAddress = "0x7af963cf6d228e564e2a0aa0ddbf06210b38615d";     //Goerli test token
+const amount = 0;
+const metadata = {protocol: 1, pointer: "strategy pointer"};
+const managers = ["your wallet here"];
+
+const tx = await allo.createPoolWithCustomStrategy(profileId, strategyAddress, initData, tokenAddress, amount, metadata, managers);
+await tx.wait();
+console.log(`Done! Transaction hash: ${tx.hash}`)
+```

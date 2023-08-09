@@ -1,8 +1,7 @@
 {
 	"index": "Overview",
 	"flow-of-funds":{
-		"title": "Flow of Funds",
-		"display": "hidden"
+		"title": "Flow of Funds"
 	},
 	"building-on-allo":{
 		"title": "Building On Allo",
