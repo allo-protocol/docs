@@ -8,16 +8,14 @@
 	},
 	"concepts": {
 		"type": "separator",
-		"title": "Allo Core",
-		"display": "hidden"
+		"title": "Allo Core"
 	},
 	"working-with-pools":{
 		"title": "Working with Pools",
 		"display": "visible"
 	},
 	"pool-roles": {
-		"title": "Pool Roles",
-		"display": "hidden"
+		"title": "Pool Roles"
 	},
 	"fees": {
 		"title": "Fees",
