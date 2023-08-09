@@ -1,14 +1,15 @@
-description: What functions are available from the IVotingStrategy
-interface?
+---
+description: What functions are available from the IStrategy interface?
+---
 
 # Interface and Spec
 
-This documentation covers methods and events in the IVotingStrategy interface.
-See [Writing a Custom Voting Strategy](writing-a-custom-voting-strategy.md) for
-more information on implementing a voting strategy.
-
-The Allo `IVotingStrategy` interface can be found here:
-<https://github.com/allo-protocol/contracts/blob/main/contracts/votingStrategy/IVotingStrategy.sol>&#x20;
+This documentation covers methods and events in the
+[`IStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/IStrategy.sol)
+interface. See [Writing a Custom Voting
+Strategy](writing-a-custom-voting-strategy.md) for more information on
+implementing your own strategies, including how to use the provided
+[`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/BaseStrategy.sol)
 
 ## Functions
 

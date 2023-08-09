@@ -1,6 +1,6 @@
-***
-
-## description: What can I do with the Project Registry?
+---
+description: What can I do with the Project Registry?
+---
 
 # Interface and Spec
 

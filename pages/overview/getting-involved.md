@@ -1,5 +1,3 @@
-description: Help us build Allo and empower communities to fund their shared needs
-
 # Getting Involved
 
 Thank you for your desire to contribute to Allo!
@@ -7,26 +5,26 @@ Thank you for your desire to contribute to Allo!
 Below you will find some ways to help, but please don't feel limited by them. If
 you have any other ideas, pop by our [Discord](https://discord.gg/gitcoin).
 
-### Building
+## Building
 
-Building on top of the protocol is a great way to get involved and contribute to the ecosystem.
+Building on top of the protocol is a great way to get involved and contribute to
+the ecosystem.
 
-One easy way to get involved is to create your own, custom
-[voting](../core-concepts/voting-strategy/) or
-[payout](../core-concepts/payout-strategy/) strategies. By combining these in
-interesting ways, you can use the power of Quadratic Funding to do anything you
-can think of.
+One easy way to get involved is to create your own [allocation
+strategy](/strategies). The pieces of an allocation strategy give you a lot of
+room to explore and play around with different mechanisms.
+
+Another way to contribute to the Allo ecosystem is to build new tools (front
+ends, apps, products, etc) for communities to allocate capital. Allo Protocol
+serves as the base-layer, but we need devs like you to build interesting
+products on top of it!
+
+## Join the Community
 
 If you have other ideas and want help on how to build them, introduce yourself
 in [Discord](https://discord.com/invite/gitcoin) in the
 `🛠allo-protocol-builders` channel.
 
-### Contributing
-
-We welcome all code contributions, large and small. Before you select a PR,
-please review our [Contributing](https://github.com/allo-protocol/contracts) and
-[Setup](https://github.com/allo-protocol/contracts) guides and familiarize
-yourself with [the
-roadmap](https://github.com/orgs/gitcoinco/projects/8/views/2). Join our
-[Discord](https://discord.com/invite/gitcoin) and introduce yourself to the team
-and they can help get you oriented.
+We also host weekly dev calls and have a (small) community on Telegram for
+people actively building on Allo. [Apply to join
+here](https://docs.google.com/forms/u/1/d/e/1FAIpQLSe7c9VsR2s32OZyw06RA7K_fr155sz-5JawQyUntRgoyiq6kg/viewform?usp=send_form)

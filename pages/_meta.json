@@ -23,6 +23,8 @@
 	"blog": {
 		"title": "Blog",
 		"type": "page",
-		"display": "hidden"
+		"theme": {
+			"typesetting": "article"
+		}
 	}
 }

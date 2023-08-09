@@ -1,0 +1,125 @@
+import Image from 'next/image'
+
+# Flow of Funds
+
+While there is a lot of nuance in how pools get allocated by Allocation
+Strategies, generally speaking there are four steps in the life cycle of a pool.
+Each step is handled by the Allo core contract (`Allo.sol`), though some of
+these methods are implemented by the allocation strategy attached to a pool.
+
+A pool's allocation strategy is what determines how funds are both allocated and
+distributed. But to make implementing consistent front ends on Allo easier,
+allocation strategies assume that they are being called by `Allo.sol`, which
+implements an `allocate()` and `distribute()` method
+
+<div className="my-10">
+    <Image
+    src="/flow-of-funds.png"
+    alt="Diagram of how funds flow through Allo"
+    width={1000}
+    height={500}
+    />
+</div>
+
+## Creating a pool
+
+The Allo core contract has two methods for creating a pool:
+
+1. The `createPool` method
+2. The `createPoolWithCustomStrategy` method
+
+While there are some differences between the two methods, they both create
+a pool for a given Profile in the Registry, and associate an allocation strategy
+to it. You can read more about the differences between the two and which to use
+in [Working with Pools](/allo/working-with-pools).
+
+Finally, you can create and fund the pool simultaneously through both methods or
+you can create the pool and then fund it separately with the `fundPool` method
+on `Allo.sol`.
+
+Some things to note:
+- Pools must be created by a Profile from the Registry
+- Pools can be created with an initial balance of 0 and funded later
+- Technically, anyone can fund a pool
+
+## Funding a Pool
+
+A pool can be funded when it is created and/or it can be funded afterwards. You
+can do either or you can do both. If funding the pool after creating it, then you'll use the `fundPool` method on `Allo.sol`. 
+
+Pools can also be funded with either native Ether or an ERC20 token. Note though
+that a pool can only distribute one token, which is determined when the pool is
+created. Trying to call `fundPool` with a token other than the one used when the
+pool was created will cause the method to revert with an error. Pools should
+always be funded using the `fundPool` method and you should never transfer funds
+directly to `Allo.sol`
+
+Once a pool has been funded, there is no way to withdraw funds from the pool
+other than to distribute them through the allocation strategy.
+
+Some things to note:
+- The address that creates the pool doesn't have to be the one that funds it
+- Technically, anyone can fund a pool
+- The protocol fee is taken on the pool
+- Pools can only distribute one token (including native Ether)
+- Never send funds to `Allo.sol`. Funds sent to `Allo.sol` are considered a gift
+    to the Allo protocol team and will be used to buy pizza. If you ask nicely,
+    we'll share the pizza with you.
+
+## Allocating Funds
+
+While allocation strategies handle the implementation of allocating a pool,
+the act of allocating is done through `Allo.sol`. This allows for
+interoperability between strategies and gives every front end built on Allo
+a consistent interface for every strategy. So allocating to any pool, using any
+allocation strategy should be done through the `allocate()` method on
+`Allo.sol`.
+
+Every pool is created with one allocation strategy that follows
+[`IStrategy.sol`](). The allocation strategy of a pool cannot be changed once
+the pool is created.
+
+Some things to note:
+- Regardless of your allocation strategy, you'll call `allocate()` on `Allo.sol`
+- Writing allocation strategies is a large topic and you can read more about it [here]().
+
+## Distributing Funds
+
+Any distribution from any pool, using any allocation strategy will be done
+through the `distribute()` method on `Allo.sol`. This is for the same reasons
+that every allocation is done through `allocate()`: to provide a consistent
+interface for front ends and make strategies interoperable (a front end
+shouldn't need to care what allocation strategy a pool is using).
+
+What happens when someone called `distribute()` is determined by the allocation
+strategy.
+
+It's important to note here that Allo keeps track of a pool's total balance, but the
+allocation strategy should keep track of each distribution to avoid things like
+double spending or over spending.
+
+Some things to note:
+- Regardless of your allocation strategy, you'll call `distribute()` on `Allo.sol`
+- Allocation strategies are responsible for managing how a pool is distributed, not `Allo.sol`
+
+## Miscellaneous
+
+### Aqueducts
+
+The flow of funds through Allo is currently linear: a pool is created and
+funded, then it's allocated and distributed through an allocation strategy. Allo
+aims to be a general-purpose protocol for allocating resources onchain and that
+includes considering where funds come from to fund a pool and where they get
+distributed to. Our solution to that is what we call an Aqueduct.
+
+The Allo team is working on a release of an Aqueduct, which is a bonus "wrapper"
+around the Allo protocol for communities, DAOs, and protocols to use to make
+funding circular:
+
+- An Aqueduct is set up by a community, DAO, or protocol
+- Some portion of fees or revenue generated by the owner are deposited into the Aqueduct
+- After enough time has passed and enough funds are raised, a pool can be created in Allo to distribute the funds to projects that drive TVL, GMV, or the equivalent metric
+- Funding these projects generates more revenue or fees, which replenish the Aqueduct
+
+The Allo protocol team expects to release some research on Aqueducts in Q4 of
+2023.
