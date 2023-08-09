@@ -1,3 +1,19 @@
 # Pool Roles
+`Allo.sol` exposes two roles for managing pools, a pool manager and a pool admin.
 
-Explain the roles, the purpose the serve, and what each role can and cannot do
+When a pool is created the admin and manager are set to msg.sender.
+
+## Pool Admin
+The admin can reassign the pool manager using the `addPoolManager` and 
+`removePoolManager` functions.
+
+## Pool Manager
+The pool manager has the ability to update the pool metadata using the 
+`updatePoolMetadata` function.
+
+Additional responsibilities can be granted to the pool manager in the pool 
+strategy. For example, some strategies may wish to limit access to the 
+`distribute` function to pool managers. The `BaseStrategy.sol` contract 
+provides an 'onlyPoolManager` modifier that can be used to restrict functions. 
+
+
