@@ -40,7 +40,7 @@
 	},
 	"interface":{
 		"title": "Interface",
-		"display": "hidden"
+		"display": "visible"
 	},
 	"library":{
 		"title": "Strategy Library"
