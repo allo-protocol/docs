@@ -1,7 +1,7 @@
-# Create an Identity
+# Create an Profile
 
 ```solidity
-function createIdentity(
+function createProfile(
     uint256 _nonce,
     string memory _name,
     Metadata memory _metadata,
