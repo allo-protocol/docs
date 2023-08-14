@@ -5,8 +5,8 @@
 		"title": "Core Concepts",
 		"display": "hidden"
 	},
-	"identities":{
-		"title": "Identities",
+	"profiles":{
+		"title": "Profiles",
 		"display": "hidden"
 	},
 	"anchors":{
@@ -26,12 +26,12 @@
 		"title": "Integrating with the Project Registry",
 		"display": "hidden"
 	},
-	"create-identity":{
-		"title": "Creating an Identity",
+	"create-profile":{
+		"title": "Creating an Profile",
 		"display": "hidden"
 	},
-	"update-identity":{
-		"title": "Updating an Identity",
+	"update-profile":{
+		"title": "Updating an Profile",
 		"display": "hidden"
 	},
 	"verify-roles-and-ownership":{
@@ -46,5 +46,10 @@
 	"interface-and-spec":{
 		"title": "Interface",
 		"display": "hidden"
+	},
+	"code": {
+		"title": "Source Code",
+		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Registry.sol",
+		"newWindow": true
 	}
 }

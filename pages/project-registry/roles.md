@@ -2,7 +2,7 @@
 
 *   Owner
 *   Admin
-*   Managing an identity
+*   Managing an profile
 *   Transferring Ownership
 *   Adding Members
 *   Remove Members

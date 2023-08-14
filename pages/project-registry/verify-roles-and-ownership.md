@@ -1,12 +1,12 @@
 # Verify Roles and Ownership
 
 *   When writing a strategy, you may want to check that an address (i.e.
-    `msg.sender` is an admin or owner of an identity)
+    `msg.sender` is an admin or owner of an profile)
 
 ```solidity
-function isOwnerOrMemberOfIdentity(bytes32 _identityId, address _account) public view returns (bool)
+function isOwnerOrMemberOfProfile(bytes32 _profileId, address _account) public view returns (bool)
 
-function isOwnerOfIdentity(bytes32 _identityId, address _owner) public view returns (bool)
+function isOwnerOfProfile(bytes32 _profileId, address _owner) public view returns (bool)
 
-function isMemberOfIdentity(bytes32 _identityId, address _member) public view returns (bool)
+function isMemberOfProfile(bytes32 _profileId, address _member) public view returns (bool)
 ```
