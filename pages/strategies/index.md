@@ -41,5 +41,5 @@ Library](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies
 includes a variety of strategy contracts. These contracts can be used as is or
 as a starting point for a custom strategy.
 
-Please note that these strategies are presented as-is and many of them have been
+Please note that these strategies are presented as-is and many of them have not been
 audited.
