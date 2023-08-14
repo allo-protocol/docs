@@ -2,50 +2,33 @@
 	"index": "Overview",
 	"concepts": {
 		"type": "separator",
-		"title": "Core Concepts",
-		"display": "hidden"
+		"title": "Core Concepts"
 	},
 	"profiles":{
-		"title": "Profiles",
-		"display": "hidden"
+		"title": "Profiles"
 	},
 	"anchors":{
-		"title": "Anchors",
-		"display": "hidden"
+		"title": "Anchors"
 	},
 	"roles":{
-		"title": "Roles",
-		"display": "hidden"
+		"title": "Roles"
 	},
 	"guides": {
 		"type": "separator",
-		"title": "Guides",
-		"display": "hidden"
+		"title": "Guides"
 	},
 	"integrating-with-the-project-registry":{
-		"title": "Integrating with the Project Registry",
-		"display": "hidden"
-	},
-	"create-profile":{
-		"title": "Creating an Profile",
-		"display": "hidden"
-	},
-	"update-profile":{
-		"title": "Updating an Profile",
-		"display": "hidden"
+		"title": "Integrating with the Project Registry"
 	},
 	"verify-roles-and-ownership":{
-		"title": "Verifying Roles and Ownership",
-		"display": "hidden"
+		"title": "Verifying Roles and Ownership"
 	},
 	"contract": {
 		"type": "separator",
-		"title": "Contract",
-		"display": "hidden"
+		"title": "Contract"
 	},
 	"interface-and-spec":{
-		"title": "Interface",
-		"display": "hidden"
+		"title": "Interface"
 	},
 	"code": {
 		"title": "Source Code",
