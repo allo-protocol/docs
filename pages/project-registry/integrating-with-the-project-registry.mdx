@@ -1,0 +1,152 @@
+import { Tabs, Tab } from 'nextra/components'
+
+# Integrating with the Project Registry
+
+// registry address 0xAEc621EC8D9dE4B524f4864791171045d6BBBe27
+
+// V2 subgraph https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
+
+## Creating a Profile
+
+Trying to test tabs
+<Tabs items={['js', 'solidity']}>
+  <Tab>**pnpm**: Fast, disk space efficient package manager.</Tab>
+  <Tab>**npm** is a package manager for the JavaScript programming language.</Tab>
+</Tabs>
+
+## Updating a Profile
+
+## Allo V2 Subgraph
+
+Project registry data is publicly available through [The Graph](https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli). Currently only Goerli data has been deployed.
+
+## Reading Project Registry Data Using The Graph
+
+Subgraph data can be accessed either manually through the subgraph Playground,
+or programmatically through The Graph API. For more information about how to set
+up these methods, please see the [Querying the
+Graph](https://thegraph.com/docs/en/querying/querying-the-graph/) page in The
+Graph documentation.
+
+If you would like to display Project Registry data in another app, see The Graph
+article on [Querying from an
+Application](https://thegraph.com/docs/en/querying/querying-from-an-application/).
+
+## Query Structure
+
+Below is a JSON structure of available query fields for the Allo Project
+Registry.
+
+Queries can be built through The Graph playground.
+
+```
+metadata(
+  block: Block_height
+  first: Int = 100
+  orderBy: Metadata_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Metadata_filter
+): [Metadata!]!
+
+role(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): Role
+
+roles(
+  block: Block_height
+  first: Int = 100
+  orderBy: Role_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Role_filter
+): [Role!]!
+
+account(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): Account
+
+accounts(
+  block: Block_height
+  first: Int = 100
+  orderBy: Account_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Account_filter
+): [Account!]!
+
+roleAccount(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): RoleAccount
+
+roleAccounts(
+  block: Block_height
+  first: Int = 100
+  orderBy: RoleAccount_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: RoleAccount_filter
+): [RoleAccount!]!
+
+profile(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): Profile
+
+profiles(
+  block: Block_height
+  first: Int = 100
+  orderBy: Profile_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Profile_filter
+): [Profile!]!
+
+allo(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): Allo
+
+allos(
+  block: Block_height
+  first: Int = 100
+  orderBy: Allo_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Allo_filter
+): [Allo!]!
+
+pool(
+  block: Block_height
+  id: ID!
+  subgraphError: _SubgraphErrorPolicy_! = deny
+): Pool
+
+pools(
+  block: Block_height
+  first: Int = 100
+  orderBy: Pool_orderBy
+  orderDirection: OrderDirection
+  skip: Int = 0
+  subgraphError: _SubgraphErrorPolicy_! = deny
+  where: Pool_filter
+): [Pool!]!
+
+_meta(block: Block_height): _Meta_
+```
+
+## Object Definition Tables
