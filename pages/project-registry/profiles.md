@@ -46,8 +46,8 @@ Currently, the only protocol id available is '1' for IPFS. For more details on
 details see
 [`MetaPtrProtocol.sol`](https://github.com/allo-protocol/allo-contracts/blob/main/docs/MetaPtrProtocol.md)
 
-## Creating and Updating Profiles
-
-See the [Create Profile](/project-registry/create-profile) and [Update
-Profile](/project-registry/update-profile) pages for implementation details.
+## Read More
+For more information about how to create and update a profile, including sample 
+code see [Create Profile](/project-registry/create-profile) and [Update Profile](/project-registry/update-profile) 
+pages.
 
