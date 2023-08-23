@@ -1,24 +1,111 @@
 import { Tabs, Tab } from 'nextra/components'
 
 # Integrating with the Project Registry
+There are two ways to interact with the Project Registry. 
+1. Through the `Registry.sol` contract
+2. Through the Allo subgraph
 
-// registry address 0xAEc621EC8D9dE4B524f4864791171045d6BBBe27
+## Writing to the Project Registry
+The `Registry.sol` contract is available at the following locations:
+* Goerli: 0xAEc621EC8D9dE4B524f4864791171045d6BBBe27
 
-// V2 subgraph https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
+### Create a Profile
+Creating a profile is required to create a pool. Some pools may also require 
+recipients or allocators to have a profile. 
+`createProfile` will return a `profileId`. This value will be needed for 
+future calls to the registry.
 
-## Creating a Profile
+```
+createIdentity(nonce, name, metadata, signer.address, []);
+```
+  #### Parameters
+| name | data type | notes |
+| --- | --- | --- |
+| _nonce | uint256 | nonce is used to create the profile profileId. By providing a nonce projects can ensure having the same id across chains. |
+| _name | string | The profile name. This is used to generate the anchor. |
+| _metadata | Metadata | See the metadata section below for more details.|
+| _owner | address | The owner of the profile. See [Roles](/roles.md) for more details about profile owners. |
+| _members | address[] | Array of profile member address. [Roles](/roles.md) for more details about profile members. |
 
-Trying to test tabs
-<Tabs items={['js', 'solidity']}>
-  <Tab>**pnpm**: Fast, disk space efficient package manager.</Tab>
-  <Tab>**npm** is a package manager for the JavaScript programming language.</Tab>
-</Tabs>
+#### Metadata
 
-## Updating a Profile
+Offchain metadata can be stored in the project registry using the Metadata
+struct.
+
+```solidity
+struct Metadata {
+    uint256 protocol;
+    string pointer;
+}
+```
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| protocol | uint256 | An id from the list of available protocols. | 
+| pointer | string | The pointer to the off chain data. | 
+
+Currently, the only protocol id available is '1' for IPFS. For more details on
+details see
+[`MetaPtrProtocol.sol`](https://github.com/allo-protocol/allo-contracts/blob/main/docs/MetaPtrProtocol.md)
+
+### Updating a Profile
+
+
+#### addMembers 
+Adds member addresses to the members array.
+Only the profile owner can add members.
+`addMembers(profileId, members)`
+
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| profileId | bytes32 | The id of the profile to update. | 
+| members | address[] | Array of member address(es) to add. | 
+
+#### removeMembers
+Removes member addresses to the members array.
+Only the profile owner can remove members.
+`removeMembers(profileId, members)`
+
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| profileId | bytes32 | The id of the profile to update. | 
+| members | address[] | Array of member address(es) to remove. | 
+
+#### updateProfileMetadata
+Will overwrite the existing profile metadata. 
+Only the owner can update profile metadata. 
+
+`updateProfileMetadata(profileId, metadata)`
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| profileId | bytes32 | The id of the profile to update. | 
+| metadata | Metadata | Metadata to add to the profile. | 
+
+#### updateProfileName
+Will set a new name for the profile. 
+Only the owner can update profile metadata. 
+This action will create a new anchorId.
+
+`updateProfileName(profileId, name)`
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| profileId | bytes32 | The id of the profile to update. | 
+| name | string | New name for the profile. | 
+
+#### updateProfilePendingOwner
+Will set a new pending owner. The pending owner will need to call 
+`acceptProfileOwnership` in order for the ownership transfer to be complete.
+Only the profile owner can set a pending owner. 
+
+updateProfilePendingOwner(profileId, pendingOwner)
+| Field | Data Type | Notes |
+| --- | --- | --- |
+| profileId | bytes32 | The id of the profile to update. | 
+| pendingOwner | address | The address for the new profile owner. | 
 
 ## Allo V2 Subgraph
-
-Project registry data is publicly available through [The Graph](https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli). Currently only Goerli data has been deployed.
+Project registry data is publicly available through The Graph.
+The graph is available for the following chains:
+* Goerli: https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
 
 ## Reading Project Registry Data Using The Graph
 
@@ -31,6 +118,52 @@ Graph documentation.
 If you would like to display Project Registry data in another app, see The Graph
 article on [Querying from an
 Application](https://thegraph.com/docs/en/querying/querying-from-an-application/).
+
+## Query Examples
+<Tabs items={['js', 'solidity']}>
+  <Tab>
+    ```
+    //Allo subgraph query url
+    const url = `https://api.thegraph.com/subgraphs/name/allo-protocol/allo-v2-goerli`
+    //define the query
+    const query = ` {
+      roles(first: 5) {
+        id
+        accounts {
+          id
+        }
+      }
+    }
+  `;
+    //prepare the request body
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query: userArticle }),
+    };
+
+    //handle the response
+    fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+    ```
+  </Tab>
+
+  <Tab>
+    ```
+        To Do
+    ```
+  </Tab>
+</Tabs>
+
 
 ## Query Structure
 
@@ -148,5 +281,6 @@ pools(
 
 _meta(block: Block_height): _Meta_
 ```
+
 
 ## Object Definition Tables
