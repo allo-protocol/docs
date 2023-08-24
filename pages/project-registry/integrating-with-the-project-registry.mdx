@@ -102,12 +102,11 @@ updateProfilePendingOwner(profileId, pendingOwner)
 | profileId | bytes32 | The id of the profile to update. | 
 | pendingOwner | address | The address for the new profile owner. | 
 
-## Allo V2 Subgraph
-Project registry data is publicly available through The Graph.
-The graph is available for the following chains:
-* Goerli: https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
-
 ## Reading Project Registry Data Using The Graph
+
+Project registry data is publicly available through The Graph.
+The Allo V2 Subgraph is available for the following chains:
+* Goerli: https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
 
 Subgraph data can be accessed either manually through the subgraph Playground,
 or programmatically through The Graph API. For more information about how to set
@@ -115,26 +114,27 @@ up these methods, please see the [Querying the
 Graph](https://thegraph.com/docs/en/querying/querying-the-graph/) page in The
 Graph documentation.
 
-If you would like to display Project Registry data in another app, see The Graph
-article on [Querying from an
-Application](https://thegraph.com/docs/en/querying/querying-from-an-application/).
+### Building Queries
+To see the data currently available in the Allo V2 Subgraph, use the 
+[Graph Playground](https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli) 
+and click on the explorer. You will also be able to build and test
+queries directly in the UI. 
 
-## Query Examples
+### Query Examples
 <Tabs items={['js', 'solidity']}>
   <Tab>
     ```
     //Allo subgraph query url
     const url = `https://api.thegraph.com/subgraphs/name/allo-protocol/allo-v2-goerli`
     //define the query
+    // This query returns the name of 10 most recently created profiles
     const query = ` {
-      roles(first: 5) {
-        id
-        accounts {
-          id
-        }
+      profiles(first: 10, orderBy: createdAt) 
+      {
+        name
       }
-    }
-  `;
+    }`;
+    
     //prepare the request body
     const options = {
       method: 'POST',
@@ -159,128 +159,29 @@ Application](https://thegraph.com/docs/en/querying/querying-from-an-application/
 
   <Tab>
     ```
-        To Do
+      // This example uses The Graph Oracle to call the Graph directly from a 
+      // smart contract. More information is available here: 
+      // https://devpost.com/software/thegraphoracle
+      // https://thegraph.com/blog/the-graph-chainlink-oracles/
+            
+      // Define query
+      // This query returns the name of 10 most recently created profile anchors
+      string memory _queryString = "{
+        profiles(first: 10, orderBy: createdAt) {
+          anchor
+        }
+      }";
+              
+      // Define call back function that would be called when the query is completed
+      bytes4 _callback = bytes4(keccak256("updateMostRecentIds(address[])"));
+      
+      // Execute the query
+      oracle.createQuery(_queryHash, _company, _product, _queryString, false, _callback);
+
     ```
   </Tab>
 </Tabs>
 
 
-## Query Structure
-
-Below is a JSON structure of available query fields for the Allo Project
-Registry.
-
-Queries can be built through The Graph playground.
-
-```
-metadata(
-  block: Block_height
-  first: Int = 100
-  orderBy: Metadata_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Metadata_filter
-): [Metadata!]!
-
-role(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): Role
-
-roles(
-  block: Block_height
-  first: Int = 100
-  orderBy: Role_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Role_filter
-): [Role!]!
-
-account(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): Account
-
-accounts(
-  block: Block_height
-  first: Int = 100
-  orderBy: Account_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Account_filter
-): [Account!]!
-
-roleAccount(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): RoleAccount
-
-roleAccounts(
-  block: Block_height
-  first: Int = 100
-  orderBy: RoleAccount_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: RoleAccount_filter
-): [RoleAccount!]!
-
-profile(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): Profile
-
-profiles(
-  block: Block_height
-  first: Int = 100
-  orderBy: Profile_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Profile_filter
-): [Profile!]!
-
-allo(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): Allo
-
-allos(
-  block: Block_height
-  first: Int = 100
-  orderBy: Allo_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Allo_filter
-): [Allo!]!
-
-pool(
-  block: Block_height
-  id: ID!
-  subgraphError: _SubgraphErrorPolicy_! = deny
-): Pool
-
-pools(
-  block: Block_height
-  first: Int = 100
-  orderBy: Pool_orderBy
-  orderDirection: OrderDirection
-  skip: Int = 0
-  subgraphError: _SubgraphErrorPolicy_! = deny
-  where: Pool_filter
-): [Pool!]!
-
-_meta(block: Block_height): _Meta_
-```
 
 
-## Object Definition Tables
