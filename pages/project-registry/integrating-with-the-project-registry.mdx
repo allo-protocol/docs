@@ -119,13 +119,15 @@ To see the data currently available in the Allo V2 Subgraph, use the
 and click on the explorer. You will also be able to build and test
 queries directly in the UI. 
 
-### Query Examples
+## Code Examples
 <Tabs items={['js', 'solidity']}>
   <Tab>
     ```
-    //Allo subgraph query url
+    // This example uses js to read from the subgraph
+    
+    // Allo subgraph query url
     const url = `https://api.thegraph.com/subgraphs/name/allo-protocol/allo-v2-goerli`
-    //define the query
+    // define the query
     // This query returns the name of 10 most recently created profiles
     const profileQuery = ` {
       profiles(first: 10, orderBy: createdAt) 
@@ -158,24 +160,22 @@ queries directly in the UI.
 
   <Tab>
     ```
-      // This example uses The Graph Oracle to call the Graph directly from a 
-      // smart contract. More information is available here: 
-      // https://devpost.com/software/thegraphoracle
-      // https://thegraph.com/blog/the-graph-chainlink-oracles/
-            
-      // Define query
-      // This query returns the name of 10 most recently created profile anchors
-      string memory _queryString = "{
-        profiles(first: 10, orderBy: createdAt) {
-          anchor
-        }
-      }";
-              
-      // Define call back function that would be called when the query is completed
-      bytes4 _callback = bytes4(keccak256("updateMostRecentIds(address[])"));
-      
-      // Execute the query
-      oracle.createQuery(_queryHash, _company, _product, _queryString, false, _callback);
+      // This example is modified from 'QVBaseStrategy.sol'
+      // It reads data directly from the registry to see 
+      // if an anchor id is a member of the profile
+
+      //import contracts
+      import {IAllo} from "../../core/interfaces/IAllo.sol";
+      import {IRegistry} from "../../core/interfaces/IRegistry.sol";
+
+      /// The registry contract. allo.getRegistry returns the registry address
+      IRegistry private _registry = allo.getRegistry();;
+
+      // function to check if anchor is a member
+      function _isProfileMember(address _anchor, address _sender) internal view returns (bool) {
+        IRegistry.Profile memory profile = _registry.getProfileByAnchor(_anchor);
+        return _registry.isOwnerOrMemberOfProfile(profile.id, _sender);
+    }
 
     ```
   </Tab>
