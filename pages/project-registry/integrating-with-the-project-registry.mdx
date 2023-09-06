@@ -46,11 +46,12 @@ details see
 
 ### Updating a Profile
 
-
 #### addMembers 
 Adds member addresses to the members array.
 Only the profile owner can add members.
-`addMembers(profileId, members)`
+```
+addMembers(profileId, members)
+```
 
 | Field | Data Type | Notes |
 | --- | --- | --- |
@@ -102,8 +103,9 @@ updateProfilePendingOwner(profileId, pendingOwner)
 ## Reading Project Registry Data Using The Graph
 
 Project registry data is publicly available through The Graph.
-The Allo V2 Subgraph is available for the following chains:
-* Goerli: https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli
+See the [Indexers](../overview/indexers.md) page for links to the
+latest graph.
+
 
 Subgraph data can be accessed either manually through the subgraph Playground,
 or programmatically through The Graph API. For more information about how to set
