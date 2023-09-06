@@ -6,8 +6,8 @@ description: What functions are available from the IStrategy interface?
 
 This documentation covers methods and events in the
 [`IStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/IStrategy.sol)
-interface. See [Writing a Custom Voting
-Strategy](writing-a-custom-voting-strategy.md) for more information on
+interface. See [Writing a Custom
+Strategy](writing-a-custom-strategy.md) for more information on
 implementing your own strategies, including how to use the provided
 [`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/BaseStrategy.sol)
 

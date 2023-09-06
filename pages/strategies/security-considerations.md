@@ -12,30 +12,21 @@ to prevent such attacks
 `function vote(bytes[] calldata encodedVotes, address voterAddress) external
 override payable nonReentrant isRoundContract {`
 
-#### Encoding Votes
+#### Encoding Data
 
-The vote method requires voting information to be encoded. Your vote method will
-need to decode the information in the body.
+Many functions in Allo require your information to be encoded. Your strategy contract 
+will need to decode the information in the body. For example, allocate in 
+[QVSimpleStrategy.sol](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/qv-simple/QVSimpleStrategy.sol) uses an abi.decode method.
 
-     for (uint256 i = 0; i < encodedVotes.length; i++) {
-          /// @dev decode encoded vote
-          (
-            address _token,
-            uint256 _amount,
-            address _grantAddress,
-            bytes32 _projectId,
-            uint256 _applicationIndex
-          ) = abi.decode(encodedVotes[i], (
-            address,
-            uint256,
-            address,
-            bytes32,
-            uint256
-          ));
+```
+function _allocate(bytes memory _data, address _sender) internal virtual override {
+        (address recipientId, uint256 voiceCreditsToAllocate) = abi.decode(_data, (address, uint256));
+```
+
 
 #### Checking the Token
 
-There should be a check to ensure that the token being sent is a valid token.
+There should be a check to ensure that any tokens being sent are valid.
 This prevents attacks by users minting new tokens or trying to vote with
 unaccepted tokens. Some voting strategies will allow voting with multiple
 tokens, which will need to be handled in the code logic.
@@ -58,11 +49,3 @@ AddressUpgradeable.sendValue(payable(_grantAddress), _amount);
         );
 </code></pre>
 
-#### Round Address Checks
-
-The vote method should only be callable by the round address that was set when
-the contract was initialized. The voting strategy interface includes a modifier
-*isRoundContract* that can be used to enforce this.
-
-`function vote(bytes[] calldata encodedVotes, address voterAddress) external
-override payable isRoundContract {`

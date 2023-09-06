@@ -12,7 +12,7 @@
 	},
 	"fees": {
 		"title": "Fees",
-		"display": "visible"
+		"display": "normal"
 	},
 	"guides": {
 		"type": "separator",
