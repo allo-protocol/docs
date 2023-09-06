@@ -127,7 +127,7 @@ queries directly in the UI.
     const url = `https://api.thegraph.com/subgraphs/name/allo-protocol/allo-v2-goerli`
     //define the query
     // This query returns the name of 10 most recently created profiles
-    const query = ` {
+    const profileQuery = ` {
       profiles(first: 10, orderBy: createdAt) 
       {
         name
@@ -140,7 +140,7 @@ queries directly in the UI.
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ query: userArticle }),
+      body: JSON.stringify({ query: profileQuery }),
     };
 
     //handle the response
