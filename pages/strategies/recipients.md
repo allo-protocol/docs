@@ -25,7 +25,7 @@ key things to think through when designing recipient eligibility are:
   the recipient?
 * What are the eligibility requirements, and how will it be determined that 
   they are being met or not?
-* What does the registration process look like? Are statuses a recipient would go through?
+* What does the registration process look like? Are there any statuses a recipient would go through?
 
 The examples in the next section show a few ways the recipient eligibility 
 process has been implemented to date, but generally the process is very flexible.
