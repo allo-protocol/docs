@@ -5,8 +5,7 @@
 		"title": "Core Concepts"
 	},
 	"recipients":{
-		"title": "Recipients",
-		"display": "visible"
+		"title": "Recipients"
 	},
 	"allocation":{
 		"title": "Allocation"
@@ -32,8 +31,7 @@
 		"title": "Contracts"
 	},
 	"interface":{
-		"title": "Interface",
-		"display": "visible"
+		"title": "Interface"
 	},
 	"library":{
 		"title": "Strategy Library"

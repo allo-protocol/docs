@@ -11,8 +11,7 @@
 		"title": "Pool Roles"
 	},
 	"fees": {
-		"title": "Fees",
-		"display": "normal"
+		"title": "Fees"
 	},
 	"guides": {
 		"type": "separator",

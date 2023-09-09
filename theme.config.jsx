@@ -11,5 +11,10 @@ export default {
         🚧 Allo v2 is under active development. Learn more →
       </a>
     )
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Allo'
+    }
   }
 }
