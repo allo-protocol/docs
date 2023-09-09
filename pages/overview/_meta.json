@@ -17,8 +17,7 @@
 	},
 	"contracts": "Contracts",
 	"indexers": {
-		"title": "Indexers",
-		"display": "hidden"
+		"title": "Indexers"
 	},
 	"allo-improvement-proposals": "Allo Improvement Proposals",
 	"getting-involved": "Getting Involved"

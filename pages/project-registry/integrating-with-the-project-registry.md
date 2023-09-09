@@ -12,14 +12,8 @@ This page covers:
 
 ## Project Registry Subgraphs
 
-Project registry data is publicly available through The Graph. Each network the
-Project Registry is deployed to has its own subgraph. Use the Playground url
-provided in the table to begin exploring the data available
-
-<table><thead><tr><th width="194">Network</th><th
-width="364">GITHUB_USER/SUBGRAPH_NAME</th><th width="452">Playground</th><th
-width="623">Query URL</th><th width="481">Subgraph
-ID</th><th></th></tr></thead><tbody><tr><td>mainnet</td><td>grants-round-mainnet</td><td>https://thegraph.com/explorer/subgraphs/BQXTJRLZi7NWGq5AXzQQxvYNa5i1HmqALEJwy3gGJHCr?view=Playground</td><td>https://gateway.thegraph.com/api/[api-key]/subgraphs/id/BQXTJRLZi7NWGq5AXzQQxvYNa5i1HmqALEJwy3gGJHCr</td><td>BQXTJRLZi7NWGq5AXzQQxvYNa5i1HmqALEJwy3gGJHCr</td><td></td></tr><tr><td>goerli</td><td>gitcoinco/grants-round-goerli-testnet</td><td>https://thegraph.com/hosted-service/subgraph/gitcoinco/grants-round-goerli-testnet</td><td>https://api.thegraph.com/subgraphs/name/gitcoinco/grants-round-goerli-testnet</td><td>QmSejgNuESLAfwi7ADVCLBDTyi963mSE5ST1FfQFJnqPnq</td><td></td></tr><tr><td>fantom</td><td>gitcoinco/grants-round-fantom-mainnet</td><td>https://thegraph.com/hosted-service/subgraph/gitcoinco/grants-round-fantom-mainnet</td><td>https://api.thegraph.com/subgraphs/name/gitcoinco/grants-round-fantom-mainnet</td><td>Qmdnp1Yeddp7fPf5jE5pejS8C1nJKU9HpBGQuibBsyMebP</td><td></td></tr><tr><td>fantom-testnet</td><td>gitcoinco/grants-round-fantom-testnet</td><td>https://thegraph.com/hosted-service/subgraph/gitcoinco/grants-round-fantom-testnet</td><td>https://api.thegraph.com/subgraphs/name/gitcoinco/grants-round-fantom-testnet</td><td>QmdJVtt4R4zdAJB4gCGtpKMPJxCwEwUnQx1J3Tdt5BALxp</td><td></td></tr><tr><td>optimism</td><td>gitcoinco/grants-round-optimism-mainnet</td><td>https://thegraph.com/hosted-service/subgraph/gitcoinco/grants-round-optimism-mainnet</td><td>https://api.thegraph.com/subgraphs/name/gitcoinco/grants-round-optimism-mainnet</td><td>QmZwiu7dmCTyNh9jEJ4sHq7bUhyazNSHPRB5jAyHKCuGJu</td><td></td></tr></tbody></table>
+Project registry data is publicly available through The Graph. See the
+[Indexing](/overview/indexers) page for access details.
 
 ## Accessing Project Registry Data
 
