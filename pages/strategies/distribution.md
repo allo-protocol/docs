@@ -1,21 +1,21 @@
 # Distribution
 
 Finally, strategies need to determine how payouts are handled for recipients.
+In general, a distribution strategy is resposible for:
+
+* Calculatiung payout amounts
+* Determining when and how often payouts occur
+* Ensuring payout eligibility and accuracy
+* Managing who can initiate a payout
+
+## Implementing Distribution
 
 Distribution strategies have a lot of flexibility in terms of how funds get
-distributed from a pool. Some commmon ways to distribute funds include:
+distributed from a pool. Some common ways to distribute funds include:
 
 * Sending the payout as a lump-sum
 * Creating a set of milestones for when funds can be requested by recipients
 * Turning on a stream with Sablier or Superfluid
-
-Your strategy has a lot of flexibility, but should generally include the
-following:
-
-* Calculate payout amounts
-* Determine when and how often payouts occur
-* Ensure payout eligibility and accuracy
-* Manage who can initiate a payout
 
 Regardless of how you decide to do distributions, these payouts will be
 implemented by calling the `distribute()` function in `Allo.sol`.
@@ -38,5 +38,5 @@ the more of the pool you're entitled to.
 | [Donation Voting](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting) | Payouts are proportional to donations, calculated off chain | Payouts are in a lump sum to any recipients marked `ready` | Only a pool manager can distribute funds | Undistributed funds can be reclaimed by the pool manager 30 days after allocation ends |
 | [Direct Grants Simple](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/direct-grants-simple) | Amount set during allocate will be payout amount | Payouts are milestone based  | Only a pool manager can distribute funds | No specific strategy for undistributed funds |
 | [RFP Committee](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/rfp-committee) | Payout amount is specified by recipient in their bid | Distribution is milestone based | Only pool admins can distribute funds | No specific strategy for undistributed funds | 
-| [Bounty Allocation](https://github.com/allo-protocol/allo-v2) | tbd | tbd  | tbd | tbd |
+
 
