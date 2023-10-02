@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://docs-gitcoino.vercel.app
+
+# Sitemaps
+Sitemap: https://docs-gitcoino.vercel.app/sitemap.xml
