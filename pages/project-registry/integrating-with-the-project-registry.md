@@ -4,11 +4,11 @@ description: How can I query Project Registry data?
 
 This page covers:
 
-*   [Subgraph details](integrating-with-the-project-registry.md#project-registry-subgraphs)
-*   [How to access subgraph data](integrating-with-the-project-registry.md#accessing-project-registry-data)
-*   [Data examples](integrating-with-the-project-registry.md#sample-data)
-*   [Data object definitions](integrating-with-the-project-registry.md#object-definition-tables)
-*   [Query examples](integrating-with-the-project-registry.md#query-structure)
+- [Subgraph details](integrating-with-the-project-registry.md#project-registry-subgraphs)
+- [How to access subgraph data](integrating-with-the-project-registry.md#accessing-project-registry-data)
+- [Data examples](integrating-with-the-project-registry.md#sample-data)
+- [Data object definitions](integrating-with-the-project-registry.md#object-definition-tables)
+- [Query examples](integrating-with-the-project-registry.md#query-structure)
 
 ## Project Registry Subgraphs
 
@@ -30,7 +30,7 @@ Application](https://thegraph.com/docs/en/querying/querying-from-an-application/
 ## Sample Data
 
 An example of the data returned from a graph query is below. For details on the
-data objects available,  the object definition tables.
+data objects available, the object definition tables.
 
     {
       "data": {
@@ -73,85 +73,119 @@ data objects available,  the object definition tables.
 
 #### MetaPtr
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"0x0067d80a449812df249712d8bfffcc41b0efc3a02f6494fab80b685044206001-0xd95a1969c41112cee9a2c931e849bcef36a16f4c"</td></tr><tr><td>protocol</td><td>Int</td><td>1
-</td></tr><tr><td>pointer</td><td>String</td><td>"bafkreifknenozxxoil4d4v7i2x5kou7b67stcujjvwdqm7exofdqjuzjqq"</td></tr></tbody></table>
+| Field    | Data Type | Sample Value                                                                                                    |
+| -------- | --------- | --------------------------------------------------------------------------------------------------------------- |
+| id       | ID        | "0x0067d80a449812df249712d8bfffcc41b0efc3a02f6494fab80b685044206001-0xd95a1969c41112cee9a2c931e849bcef36a16f4c" |
+| protocol | Int       | 1                                                                                                               |
+| pointer  | String    | "bafkreifknenozxxoil4d4v7i2x5kou7b67stcujjvwdqm7exofdqjuzjqq"                                                   |
 
 #### Program
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"0x0515c873d9afc5fc8523c9eb148e8b9cab5125da"</td></tr><tr><td>roles</td><td>Array
-of <a href="integrating-with-the-project-registry.md#programrole">ProgramRole
-</a></td><td></td></tr><tr><td>accounts</td><td>Array of <a
-href="integrating-with-the-project-registry.md#programaccount">ProgramAccount</a></td><td></td></tr><tr><td>rounds</td><td>Array
-of <a href="integrating-with-the-project-registry.md#round">Round
-</a></td><td></td></tr><tr><td>metaPtr</td><td><a
-href="integrating-with-the-project-registry.md#metaptr">MetaPtr</a></td><td></td></tr><tr><td>createdAt</td><td>BigInt</td><td>"1680284639"</td></tr><tr><td>updatedAt</td><td>BigInt</td><td>"1680284639"</td></tr></tbody></table>
+| Field     | Data Type                                                                          | Sample Value                                 |
+| --------- | ---------------------------------------------------------------------------------- | -------------------------------------------- |
+| id        | ID                                                                                 | "0x0515c873d9afc5fc8523c9eb148e8b9cab5125da" |
+| roles     | Array of [ProgramRole](integrating-with-the-project-registry.md#programrole)       |                                              |
+| accounts  | Array of [ProgramAccount](integrating-with-the-project-registry.md#programaccount) |                                              |
+| rounds    | Array of [Round](integrating-with-the-project-registry.md#round)                   |                                              |
+| metaPtr   | [MetaPtr](integrating-with-the-project-registry.md#metaptr)                        |                                              |
+| createdAt | BigInt                                                                             | "1680284639"                                 |
+| updatedAt | BigInt                                                                             | "1680284639"                                 |
 
 #### ProgramRole
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"0x0515c873d9afc5fc8523c9eb148e8b9cab5125da-0x0000000000000000000000000000000000000000000000000000000000000000"</td></tr><tr><td>role</td><td>String</td><td>"0x0000000000000000000000000000000000000000000000000000000000000000"</td></tr><tr><td>accounts</td><td>Array
-of <a
-href="integrating-with-the-project-registry.md#programaccount">ProgramAccount</a></td><td></td></tr><tr><td>program</td><td><a
-href="integrating-with-the-project-registry.md#program">Program</a></td><td></td></tr></tbody></table>
+| Field    | Data Type                                                                          | Sample Value                                                                                                    |
+| -------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| id       | ID                                                                                 | "0x0515c873d9afc5fc8523c9eb148e8b9cab5125da-0x0000000000000000000000000000000000000000000000000000000000000000" |
+| role     | String                                                                             | "0x0000000000000000000000000000000000000000000000000000000000000000"                                            |
+| accounts | Array of [ProgramAccount](integrating-with-the-project-registry.md#programaccount) |                                                                                                                 |
+| program  | [Program](integrating-with-the-project-registry.md#program)                        |                                                                                                                 |
 
 #### ProgramAccount
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckNjr"</td></tr><tr><td>address</td><td>String</td><td>"0x0000008735754eda8db6b50aeb93463045fc5c55"</td></tr><tr><td>role</td><td><a
-href="integrating-with-the-project-registry.md#programrole">ProgramRole</a></td><td></td></tr><tr><td>program</td><td><a
-href="integrating-with-the-project-registry.md#program">Program</a></td><td></td></tr></tbody></table>
+| Field   | Data Type                                                           | Sample Value                                   |
+| ------- | ------------------------------------------------------------------- | ---------------------------------------------- |
+| id      | ID                                                                  | "52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckNjr" |
+| address | String                                                              | "0x0000008735754eda8db6b50aeb93463045fc5c55"   |
+| role    | [ProgramRole](integrating-with-the-project-registry.md#programrole) |                                                |
+| program | [Program](integrating-with-the-project-registry.md#program)         |                                                |
 
 #### Round
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckHgi"</td></tr><tr><td>program</td><td><a
-href="integrating-with-the-project-registry.md#program">Program</a></td><td></td></tr><tr><td>roles</td><td>Array
-of <a
-href="integrating-with-the-project-registry.md#roundrole">RoundRole</a></td><td></td></tr><tr><td>accounts</td><td>Array
-of <a
-href="integrating-with-the-project-registry.md#roundaccount">RoundAccount</a></td><td></td></tr><tr><td>projects</td><td>Array
-of <a
-href="integrating-with-the-project-registry.md#roundproject">RoundProject</a></td><td></td></tr><tr><td>votingStrategy</td><td><a
-href="integrating-with-the-project-registry.md#votingstrategy">VotingStrategy</a></td><td></td></tr><tr><td>payoutStrategy</td><td>String</td><td></td></tr><tr><td>applicationsStartTime</td><td>String</td><td>"1680284639"</td></tr><tr><td>applicationsEndTime</td><td>String</td><td>"1680284639"</td></tr><tr><td>roundStartTime</td><td>String</td><td>"1680284639"</td></tr><tr><td>roundEndTime</td><td>String</td><td>"1680284639"</td></tr><tr><td>token</td><td>String</td><td></td></tr><tr><td>roundMetaPtr</td><td><a
-href="integrating-with-the-project-registry.md#metaptr">MetaPtr</a></td><td></td></tr><tr><td>applicationMetaPtr</td><td><a
-href="integrating-with-the-project-registry.md#metaptr">MetaPtr</a></td><td></td></tr><tr><td>projectsMetaPtr</td><td><a
-href="integrating-with-the-project-registry.md#metaptr">MetaPtr</a></td><td></td></tr><tr><td>createdAt</td><td>BigInt</td><td>"1680284639"</td></tr><tr><td>updatedAt</td><td>BigInt</td><td>"1680284639"</td></tr></tbody></table>
+| Field                 | Data Type                                                                      | Sample Value                                   |
+| --------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------- |
+| id                    | ID                                                                             | "52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckHgi" |
+| program               | [Program](integrating-with-the-project-registry.md#program)                    |                                                |
+| roles                 | Array of [RoundRole](integrating-with-the-project-registry.md#roundrole)       |                                                |
+| accounts              | Array of [RoundAccount](integrating-with-the-project-registry.md#roundaccount) |                                                |
+| projects              | Array of [RoundProject](integrating-with-the-project-registry.md#roundproject) |                                                |
+| votingStrategy        | [VotingStrategy](integrating-with-the-project-registry.md#votingstrategy)      |                                                |
+| payoutStrategy        | String                                                                         |                                                |
+| applicationsStartTime | String                                                                         | "1680284639"                                   |
+| applicationsEndTime   | String                                                                         | "1680284639"                                   |
+| roundStartTime        | String                                                                         | "1680284639"                                   |
+| roundEndTime          | String                                                                         | "1680284639"                                   |
+| token                 | String                                                                         |                                                |
+| roundMetaPtr          | [MetaPtr](integrating-with-the-project-registry.md#metaptr)                    |                                                |
+| applicationMetaPtr    | [MetaPtr](integrating-with-the-project-registry.md#metaptr)                    |                                                |
+| projectsMetaPtr       | [MetaPtr](integrating-with-the-project-registry.md#metaptr)                    |                                                |
+| createdAt             | BigInt                                                                         | "1680284639"                                   |
+| updatedAt             | BigInt                                                                         | "1680284639"                                   |
 
 #### RoundRole
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"0x0515c873d9afc5fc8523c9eb148e8b9cab5125da-0x0000000000000000000000000000000000000000000000000000000000000000"</td></tr><tr><td>role</td><td>String</td><td>"0x0000000000000000000000000000000000000000000000000000000000000000"</td></tr><tr><td>accounts</td><td>Array
-of <a
-href="integrating-with-the-project-registry.md#roundaccount">RoundAccount</a></td><td></td></tr><tr><td>round</td><td><a
-href="integrating-with-the-project-registry.md#round">Round</a></td><td></td></tr></tbody></table>
+| Field    | Data Type                                                                      | Sample Value                                                                                                    |
+| -------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| id       | ID                                                                             | "0x0515c873d9afc5fc8523c9eb148e8b9cab5125da-0x0000000000000000000000000000000000000000000000000000000000000000" |
+| role     | String                                                                         | "0x0000000000000000000000000000000000000000000000000000000000000000"                                            |
+| accounts | Array of [RoundAccount](integrating-with-the-project-registry.md#roundaccount) |                                                                                                                 |
+| round    | [Round](integrating-with-the-project-registry.md#round)                        |                                                                                                                 |
 
 #### RoundAccount
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data
-Type</th><th>Sample
-Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td>"52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckNjr"</td></tr><tr><td>address</td><td>String</td><td>"0x0000008735754eda8db6b50aeb93463045fc5c55"</td></tr><tr><td>role</td><td><a
-href="integrating-with-the-project-registry.md#roundrole">RoundRole</a></td><td></td></tr><tr><td>round</td><td><a
-href="integrating-with-the-project-registry.md#round">Round</a></td><td></td></tr></tbody></table>
+| Field   | Data Type                                                       | Sample Value                                   |
+| ------- | --------------------------------------------------------------- | ---------------------------------------------- |
+| id      | ID                                                              | "52GswSdosCpDYHmc6a1qACmzk65WwFDDApEE4KqckNjr" |
+| address | String                                                          | "0x0000008735754eda8db6b50aeb93463045fc5c55"   |
+| role    | [RoundRole](integrating-with-the-project-registry.md#roundrole) |                                                |
+| round   | [Round](integrating-with-the-project-registry.md#round)         |                                                |
 
 #### RoundProject
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data Type</th><th>Sample Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td></td></tr><tr><td>project</td><td>String</td><td></td></tr><tr><td>status</td><td>String</td><td></td></tr><tr><td>metaPtr</td><td><a href="integrating-with-the-project-registry.md#metaptr">MetaPtr</a></td><td></td></tr><tr><td>round</td><td><a href="integrating-with-the-project-registry.md#round">Round</a></td><td></td></tr><tr><td>payoutAddress</td><td>String</td><td></td></tr><tr><td>createdAt</td><td>BigInt</td><td></td></tr><tr><td>updatedAt</td><td>BigInt</td><td></td></tr></tbody></table>
+| Field         | Data Type                                                   | Sample Value |
+| ------------- | ----------------------------------------------------------- | ------------ |
+| id            | ID                                                          |              |
+| project       | String                                                      |              |
+| status        | String                                                      |              |
+| metaPtr       | [MetaPtr](integrating-with-the-project-registry.md#metaptr) |              |
+| round         | [Round](integrating-with-the-project-registry.md#round)     |              |
+| payoutAddress | String                                                      |              |
+| createdAt     | BigInt                                                      |              |
+| updatedAt     | BigInt                                                      |              |
 
 #### VotingStrategy
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data Type</th><th>Sample Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td></td></tr><tr><td>strategyName</td><td>String</td><td></td></tr><tr><td>StrategyAddress</td><td>String</td><td></td></tr><tr><td>round</td><td><a href="integrating-with-the-project-registry.md#round">Round</a></td><td></td></tr><tr><td>votes</td><td><a href="integrating-with-the-project-registry.md#qfvote">QFVote</a></td><td></td></tr><tr><td>version</td><td>String</td><td></td></tr></tbody></table>
+| Field           | Data Type                                                 | Sample Value |
+| --------------- | --------------------------------------------------------- | ------------ |
+| id              | ID                                                        |              |
+| strategyName    | String                                                    |              |
+| StrategyAddress | String                                                    |              |
+| round           | [Round](integrating-with-the-project-registry.md#round)   |              |
+| votes           | [QFVote](integrating-with-the-project-registry.md#qfvote) |              |
+| version         | String                                                    |              |
 
 #### QFVote
 
-<table><thead><tr><th width="226.33333333333331">Field</th><th>Data Type</th><th>Sample Value</th></tr></thead><tbody><tr><td>id</td><td>ID</td><td></td></tr><tr><td>votingStrategy</td><td><a href="integrating-with-the-project-registry.md#votingstrategy">VotingStrategy</a></td><td></td></tr><tr><td>token</td><td>String</td><td></td></tr><tr><td>amount</td><td>BigInt</td><td></td></tr><tr><td>from</td><td>String</td><td></td></tr><tr><td>to</td><td>String</td><td></td></tr><tr><td>projectId</td><td>String</td><td></td></tr><tr><td>version</td><td>String</td><td></td></tr><tr><td>createdAt</td><td>BigInt</td><td></td></tr></tbody></table>
+| Field          | Data Type                                                                 | Sample Value |
+| -------------- | ------------------------------------------------------------------------- | ------------ |
+| id             | ID                                                                        |              |
+| votingStrategy | [VotingStrategy](integrating-with-the-project-registry.md#votingstrategy) |              |
+| token          | String                                                                    |              |
+| amount         | BigInt                                                                    |              |
+| from           | String                                                                    |              |
+| to             | String                                                                    |              |
+| projectId      | String                                                                    |              |
+| version        | String                                                                    |              |
+| createdAt      | BigInt                                                                    |              |
 
 ## Query Structure
 
