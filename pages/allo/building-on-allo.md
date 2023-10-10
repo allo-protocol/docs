@@ -1,7 +1,5 @@
 # Building on Allo
 
-## Introduction
-
 This page walks through the core methods in `Allo.sol` and how to interact with
 them. If you're building an application or product on top of Allo protocol, most
 of the interactions your application has with Allo will be through this

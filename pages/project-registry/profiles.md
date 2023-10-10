@@ -1,7 +1,5 @@
 # Profile
 
-## Introduction
-
 Profiles contain details about Allo participants. An Allo registry profile is
 required to create a pool. It is also recommended that strategies use Allo
 profiles for their recipients, but it is not required. 

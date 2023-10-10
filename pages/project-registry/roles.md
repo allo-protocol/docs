@@ -1,7 +1,5 @@
 # Roles
 
-## Introduction
-
 The registry provides a simple role system that can be used by projects integrating with the registry.
 
 There are two roles available: `owner` and `member`.
