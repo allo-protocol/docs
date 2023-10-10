@@ -2,8 +2,6 @@
 description: What do I need to know about strategies?
 ---
 
-# Introduction 
-
 Allo uses a single strategy contract to handle all logic around recipient
 eligibility, allocation, and token distribution. Every pool needs a pre-deployed
 strategy before it can be created. Developers can choose to create a custom
