@@ -15,7 +15,11 @@
 		"type": "separator",
 		"title": "Extras"
 	},
-	"contracts": "Contracts",
+	"contracts": {
+		"title": "Contracts",
+		"href": "https://github.com/allo-protocol/allo-v2/tree/main/contracts#contract-deployment-information-for-testnets",
+		"newWindow": true
+	},
 	"indexers": {
 		"title": "Indexers"
 	},
