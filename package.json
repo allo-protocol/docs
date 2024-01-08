@@ -1,6 +1,6 @@
 {
 	"name": "allo-v2-docs",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"description": "Documentation for the second version of Gitcoin's Allo Protocol",
 	"scripts": {
 		"dev": "next dev",
