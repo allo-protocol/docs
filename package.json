@@ -1,40 +1,43 @@
 {
-	"name": "Allo v2 Documentation",
-	"version": "0.0.1",
-	"description": "Documentation for the second version of Gitcoin's Allo Protocol",
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"postbuild": "next-sitemap",
-		"start": "next start",
-		"format": "remark . --output"
-	},
-	"dependencies": {
-		"next": "^13.4.3",
-		"next-sitemap": "^4.2.3",
-		"nextra": "^2.10.0",
-		"nextra-theme-docs": "^2.6.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
-	},
-	"devDependencies": {
-		"autoprefixer": "^10.4.14",
-		"postcss": "^8.4.27",
-		"remark-cli": "^11.0.0",
-		"remark-frontmatter": "^4.0.1",
-		"remark-lint-maximum-line-length": "^3.1.3",
-		"remark-preset-lint-consistent": "^5.1.2",
-		"remark-preset-lint-recommended": "^6.1.3",
-		"tailwindcss": "^3.3.3",
-		"typescript": "5.1.6"
-	},
-	"remarkConfig": {
-		"settings": {},
-		"plugins": [
-			"remark-preset-lint-consistent",
-			"remark-preset-lint-recommended",
-			"remark-frontmatter",
-			"remark-lint-maximum-line-length"
-		]
-	}
+  "name": "allo-v2-docs",
+  "version": "0.0.2",
+  "description": "Documentation for the second version of Gitcoin's Allo Protocol",
+  "authors": [
+    "Allo <[email protected]>"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "format": "remark . --output"
+  },
+  "dependencies": {
+    "next": "^13.4.3",
+    "next-sitemap": "^4.2.3",
+    "nextra": "2.13.2",
+    "nextra-theme-docs": "2.13.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "remark-cli": "^11.0.0",
+    "remark-frontmatter": "^4.0.1",
+    "remark-lint-maximum-line-length": "^3.1.3",
+    "remark-preset-lint-consistent": "^5.1.2",
+    "remark-preset-lint-recommended": "^6.1.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
+  },
+  "remarkConfig": {
+    "settings": {},
+    "plugins": [
+      "remark-preset-lint-consistent",
+      "remark-preset-lint-recommended",
+      "remark-frontmatter",
+      "remark-lint-maximum-line-length"
+    ]
+  }
 }
