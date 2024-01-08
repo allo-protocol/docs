@@ -9,11 +9,11 @@ There are two ways to interact with the Project Registry.
 ### Create a Profile
 Creating a profile is required to create a pool. Some pools may also require 
 recipients or allocators to have a profile. 
-`createProfile` will return a `profileId`. This value will be needed for 
+`createProfile` will return a `profileId` type `bytes32`. This value will be needed for 
 future calls to the registry.
 
 ```
-createIdentity(nonce, name, metadata, signer.address, []);
+createProfile(nonce, name, metadata, signer.address, []);
 ```
   #### Parameters
 | name | data type | notes |
