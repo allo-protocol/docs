@@ -21,7 +21,8 @@
 		"newWindow": true
 	},
 	"indexers": {
-		"title": "Indexers"
+		"title": "Indexers",
+		"display": "normal"
 	},
 	"allo-improvement-proposals": "Allo Improvement Proposals",
 	"getting-involved": "Getting Involved"

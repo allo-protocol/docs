@@ -34,5 +34,13 @@
 		"title": "Source Code",
 		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Registry.sol",
 		"newWindow": true
+	},
+	"create-profile":{
+		"title": "Create Profile",
+		"display": "hidden"
+	},
+	"update-profile":{
+		"title": "Update Profile",
+		"display": "hidden"
 	}
 }
