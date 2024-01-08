@@ -21,10 +21,10 @@ cloning a strategy provided as part of Allo. This saves gas and makes it easier
 to deploy a pool from the front end. If you're using your own strategy, then
 you'll use the second method (`createPoolWithCustomStrategy`).
 
-<!-- Further reading:
+Further reading:
 
 * [Working with Pools](/allo/working-with-pools)
-* [Building on Allo](/allo/building-on-allo) -->
+* [Building on Allo](/allo/building-on-allo)
 
 ## Adding and removing funds
 
@@ -45,10 +45,10 @@ Also note that once a pool is funded, the only way to distribute those funds is
 through the allocation strategy. You cannot change which allocation strategy is
 tied to a particular pool.
 
-<!-- Further reading:
+Further reading:
 
 * [Working with Pools](/allo/working-with-pools)
-* [Building on Allo](/allo/building-on-allo) -->
+* [Building on Allo](/allo/building-on-allo)
 
 ## Managing a Pool
 
@@ -74,9 +74,9 @@ The reason for this role system is two fold:
 1. To determine which addresses can update data about the pool
 2. Optionally, for use in an allocation strategy when determining which addresses can allocate from a pool
 
-<!-- Further reading:
+Further reading:
 
-* [Pool Roles](/allo/pool-roles) -->
+* [Pool Roles](/allo/pool-roles)
 
 ## Fees
 
@@ -95,6 +95,6 @@ The fee is determined through [Gitcoin's
 governance](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358)
 process and uses GTC as the voting token.
 
-<!-- Further reading:
+Further reading:
 
-* [Fees](/allo/fees) -->
+* [Fees](/allo/fees)
