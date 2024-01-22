@@ -2,7 +2,7 @@
 
 The Allo Protocol team manages a set of vetted allocation strategies that can be
 cloned using `createPool`. This saves gas and is useful for strategies that are
-used often. The full list of these strategies can be found on the [Contracts](/overview/contracts) page.
+used often. The full list of these strategies can be found [here](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies).
 
 ## Managing Cloneable Strategies
 
