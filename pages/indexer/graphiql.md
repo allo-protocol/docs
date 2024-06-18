@@ -13,10 +13,11 @@ and `application`.
 ### IDs
 The identifying information for a query is typically in purple and near the
 top. The most important parameters are:
-* `chainId` - unique to each blockchain supported by Allo ([Allo list](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains),
+* `chainId` - unique to each blockchain supported by Allo 
+  ([Allo supported](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains),
   [full list](https://chainlist.org/))
   * E.g. Arbitrum One - `42161`, Optimism - `10`
-* `roundId` - unique to each round on a chain
+* `roundId` - unique to each round of a chain
 * Application `id` - unique to each application of a round
 
 Tip: if you're able to find a round or application in the

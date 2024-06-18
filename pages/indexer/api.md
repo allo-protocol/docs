@@ -19,10 +19,11 @@ As mentioned in [Data](/indexer/data), the most common models involve
 
 ### IDs
 The most common identifying parameters are:
-* `chainId` - unique to each blockchain supported by Allo ([Allo list](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains),
+* `chainId` - unique to each blockchain supported by Allo 
+  ([Allo supported](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains),
   [full list](https://chainlist.org/))
   * E.g. Arbitrum One - `42161`, Optimism - `10`
-* `roundId` - unique to each round on a chain
+* `roundId` - unique to each round of a chain
 * Application `id` - unique to each application of a round
 
 Tip: if you're able to find a round or application in the
@@ -34,7 +35,7 @@ Not all models will use all three `id` types. For example, the
 provided chain.
 
 ### Return data
-The return parameters will depend on the model used. Due to the connected
+The return parameters will depend on the model used. Due to the connected 
 nature of the data types, entire models can
 be found nested within others. One could query an individual 
 `application`, or find it inside a `round`.

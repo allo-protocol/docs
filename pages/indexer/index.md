@@ -5,9 +5,9 @@ description: What is the allo/grants-stack indexer?
 
 The [Allo/Grants-Stack Indexer](https://github.com/gitcoinco/grants-stack-indexer)
 is a publicly available API for retrieving information about ongoing and 
-historical Allo protocol events. The Indexer monitors activity across all 
-[Allo-supported chains](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains)
-, building a complete picture of Program Rounds, Project Applications, and more.
+historical Allo protocol events. Indexer monitors activity across 
+[Allo-supported chains](https://github.com/gitcoinco/gitcoin-chain-data/tree/main/src/data/chains),
+ building a complete picture of Program Rounds, Project Applications, and more.
 
 Queries to this endpoint are straightforward, fast, and free. All queries are
 GraphQL format, and can be made

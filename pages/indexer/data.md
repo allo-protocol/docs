@@ -1,14 +1,14 @@
 ## Data Models
 
-Indexer contains many models, the most pertinent being related to
+Indexer contains many models, the most pertinent related to
  `project`, `round`, and `application`:
-* A Project can either be a funds-seeking team, or a funds-providing
+* A Project can be a funds-seeking team, or a funds-providing
   organization (typically called a "program"). Both can have multiple 
   applications or rounds.
-* A Round is a specific and time-dependent funding initiative sponsored
+* A Round is a specific time-dependent funding initiative sponsored
   by a program. Teams fill out applications to rounds they qualify for.
 * An Application is a form filled out by a team seeking funding.
-  Applications are always specific to a round.
+  Applications are specific to a round.
 
 All rounds and applications are memorialized on an EVM-compatible
 blockchain. These chains are identified by a unique

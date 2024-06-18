@@ -13,7 +13,7 @@ open-source, and deployable to a variety of environments:
 The Indexer can be a resource-intensive application to maintain.
 
 Indexer requires knowledge of chain events, market prices, and 
-IPFS-stored content. These are all fetched over various 
+access to IPFS-stored content. These are all fetched over various 
 RPCs/APIs/gateways, which can be intensive to configure (see 
 [`.env.example`](https://github.com/gitcoinco/grants-stack-indexer/blob/main/.env.example)
 ). Additionally, these can take up substantial space on disk, and
