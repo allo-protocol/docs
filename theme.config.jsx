@@ -22,7 +22,7 @@ export default {
     return (
       <>
         <meta property="og:url" content={url} />
-        <meta property="og:title" content={frontMatter.title || 'Allo'} />
+        <meta property="og:title" content={frontMatter.title || 'Allo Docs'} />
         <meta
           property="og:description"
           content={frontMatter.description || 'The Allo protocol docs'}
