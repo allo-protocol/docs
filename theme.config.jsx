@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 
 export default {
@@ -13,15 +12,10 @@ export default {
     }
   },
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter()
     const { frontMatter } = useConfig()
-    const url =
-      'https://docs.allo.gitcoin.co' +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
  
     return (
       <>
-        <meta property="og:url" content={url} />
         <meta property="og:title" content={frontMatter.title || 'Allo Docs'} />
         <meta
           property="og:description"
