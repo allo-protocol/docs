@@ -1,0 +1,36 @@
+# IDs and Anchors
+
+There are two unique identifiers in the Allo registry, Ids and Anchors.
+Both can be used to represent a project, but they serve different purposes
+within the Allo ecosystem.
+
+## Profile Ids
+Profile ids are a permanent, internal representation of a project. They are 
+returned when a profile is created and are derived from the nonce and sender 
+address. 
+
+Profile Ids are generally not used outside of the project registry, except to 
+create a pool in `Allo.sol`. 
+
+## Anchors
+Anchors are an on-chain address that represents the project globally.
+
+When a profile is created, an `Anchor.sol` contract is deployed and an anchor 
+address is assigned. Anchors are mutable, and are updated whenever the project 
+name is changed.
+
+Anchors serve two main functions in the registry:
+1. They serve as a project escrow account. 
+Funds can be sent to and withdrawn from the anchor address.
+
+2. The anchor can accrue reputation for the project. 
+It can represent the project in any attestations, be used as a soul-bound 
+token, or used as a pointer in a registry.
+
+## Compare and Contrast
+| ID | Anchor|
+| --- | --- |
+| persistent, stable | mutable, unstable |
+| internal | external |
+| | Can receive funds |
+| | Can hold tokens |

@@ -1,0 +1,46 @@
+{
+	"index": "Overview",
+	"concepts": {
+		"type": "separator",
+		"title": "Core Concepts"
+	},
+	"profiles":{
+		"title": "Profiles"
+	},
+	"anchors":{
+		"title": "Anchors and Ids"
+	},
+	"roles":{
+		"title": "Roles"
+	},
+	"guides": {
+		"type": "separator",
+		"title": "Guides"
+	},
+	"integrating-with-the-registry":{
+		"title": "Integrating with the Project Registry"
+	},
+	"verify-roles-and-ownership":{
+		"title": "Verifying Roles and Ownership"
+	},
+	"contract": {
+		"type": "separator",
+		"title": "Contract"
+	},
+	"interface-and-spec":{
+		"title": "Interface"
+	},
+	"code": {
+		"title": "Source Code",
+		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Registry.sol",
+		"newWindow": true
+	},
+	"create-profile":{
+		"title": "Create Profile",
+		"display": "hidden"
+	},
+	"update-profile":{
+		"title": "Update Profile",
+		"display": "hidden"
+	}
+}
