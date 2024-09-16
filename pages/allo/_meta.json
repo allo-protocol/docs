@@ -27,7 +27,8 @@
 		"title": "Working with Pools"
 	},
 	"auditing-a-strategy":{
-		"title": "Auditing a Strategy"
+		"title": "Auditing a Strategy",
+		"display": "hidden"
 	},
 	"contract": {
 		"type": "separator",

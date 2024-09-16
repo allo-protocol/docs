@@ -6,7 +6,7 @@ description: What is the Allo Protocol?
 <div className="mb-12 mt-16 flex flex-col items-center">
   <img src="/Allo_Logomark_Green.png" className="max-h-16 mb-3" />
   <h1 className="font-extrabold text-4xl title">Allo Protocol</h1>
-  <p className="text-xl">A general purpose protocol for the efficient allocation of capital.</p>
+  <p className="text-xl">A general protocol for the efficient allocation of capital.</p>
 </div>
 
 Allo Protocol is a set of smart contracts that enable the democratic allocation
@@ -16,27 +16,25 @@ grants and quadratic funding.
 
 ### Why a Protocol for Capital Allocation?
 
-Crypto has given us an incredible set of tools for forming capital: token drops,
-NFTs, treasury diversifications, staking and yield, etc. It has also given us
-democratic and secure ways of keeping that capital safe: Safe, Governor Bravo,
-among others. But very little of the money raised gets allocated back into the
-community. Instead, it sits in treasuries while flame wars wage on in governance
-forums over peanut-sized funding decisions.
+Web3 has given us an incredible set of tools for forming capital, and
+democratic ways of keeping that capital safe. But very little of the money raised gets
+allocated back into the community. Instead, it sits in treasuries while governance forums
+deliberate over peanut-sized funding decisions.
 
 Why?
+Every proposal has root-level access to the treasury and the entire
+community gets to weigh in on every funding decision.
 
-Well every proposal has root-level access to the treasury and the entire
-community gets to weight in on every funding decision.
+**Allo** gives communities a tool set to experiment with capital allocation. Pick
+a mechanism (like [Quadratic Funding](https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants-program/mechanisms/quadratic-funding)),
+eligibility criteria for projects and voters, and a way to distribute the capital
+(lump sum, milestone-based payments, etc).
 
-Allo gives communities a tool set to experiment with capital allocation. Pick
-a mechanism (like Quadratic Funding), eligibility criteria for projects and
-voters, and how to distribute the capital (lump sum, milestone-based payments,
-etc).
+Instead of choosing from a list of options put together not because they'll serve
+you best, but because its whats available, we charge communities to ask - "If our
+mechanism could look like anything, what would we want?"
 
-Our hope is that communities will use Allo to build and experiment with multiple
-different ways of allocating and distributing capital in their community and
-that the movement of tokens will unlock communities to grow and achieve their
-missions.
+...and build it.
 
 ### Use Cases
 
@@ -51,50 +49,39 @@ missions.
 
 You can use this documentation to [get an overview of the
 protocol](/overview). We also welcome contributions and would love for
-you to [get involved](overview/getting-involved.md). Finally, you can head to
+you to [get involved](development/getting-involved.md). Finally, you can head to
 [gitcoin.co](https://www.gitcoin.co) to keep up to date with protocol releases.
 
 ### Community
 
 - [ Twitter ](https://twitter.com/alloprotocol)
 - [ GitHub discussion ](https://github.com/orgs/allo-protocol/discussions)
-- [ Discord ](https://discord.com/channels/562828676480237578/1095437947018432533)
-- [ ?Telegram ](https://t.me/c/1935475570/1)
+- Discord - see [Getting Involved ](development/getting-involved.md)
 
 ### Current Status
 
-We are live on mainets, please see the `main` branch of the [ `allo-v2`
-](https://github.com/allo-protocol/allo-v2/) repository on GitHub for our 
-[supported networks](https://github.com/allo-protocol/allo-v2/blob/main/contracts/README.md).
+Allo v2 is live on mainnets ([supported networks](https://github.com/allo-protocol/allo-v2/blob/main/contracts/README.md)).
 
-High-level dates on the 2024 roadmap (WIP):
+Allo 2.1 is in pre-release testnet.
 
-* Q1 Grants Stack integration to v2
-* Q2
-* Q3
-* Q4
 
 ## Allo Protocol vs the Grants Stack
 
 In addition to Allo Protocol, Gitcoin offers a suite of products called the
 [Grants Stack](https://www.gitcoin.co/grants-stack).
 
-Allo Protocol is for people building applications with novel capital allocation
+Allo Protocol is for building applications with novel capital allocation
 mechanisms, like quadratic funding. The protocol contains a registry of
-recipients ([Project Registry](https://docs.allo.gitcoin.co/overview/project-registry)), a way to create
+recipients ([Project Registry](https://docs.allo.gitcoin.co/overview/registry)), a way to create
 pools of capital ([Pools](https://docs.allo.gitcoin.co/overview/pool)), and a strategy
 for allocating that pool of capital ([Allocation
 Strategy](https://docs.allo.gitcoin.co/overview/allocation-strategy)). Anyone building
 custom tools for communities to allocate capital or for projects to receive
 capital should use Allo.
 
-The [Grants Stack](https://www.gitcoin.co/grants-stack) is a self-service suite
-of products for hosting a grants program. For now, it lets you run Gitcoin-style
-quadratic funding rounds in your ecosystem, but will expand into other forms of
-grants over time. The product suite offers everything you'd need to run your
-grants program without writing any code. So if you just want to run your grants
-program, the [Grants Stack](https://www.gitcoin.co/grants-stack) is a good fit
-for you.
+The [Grants Stack](https://www.gitcoin.co/grants-stack) is a product layer built
+on Allo for hosting a grants program. It powers fully-featured self-serve funding 
+rounds utilizing a [variety of methods](https://support.gitcoin.co/gitcoin-knowledge-base/gitcoin-grants-program/mechanisms).
 
 ### Next Steps
 
@@ -102,6 +89,6 @@ import { Card, Cards } from 'nextra-theme-docs'
 
 <Cards>
   <Card title="Conceptual Overview" href="/overview" />
-  <Card title="Contracts" href="/overview/contracts" />
-  <Card title="Getting Involved" href="/overview/getting-involved" />
+  <Card title="Contracts" href="https://github.com/allo-protocol/allo-v2/tree/main/contracts" />
+  <Card title="Getting Involved" href="/development/getting-involved" />
 </Cards>

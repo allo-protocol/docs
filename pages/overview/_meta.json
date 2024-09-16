@@ -6,7 +6,7 @@
 	},
 	"pool": "Pool",
 	"allocation-strategy": "Allocation Strategy",
-	"project-registry": "Project Registry",
+	"registry": "Registry",
 	"aqueduct": {
 		"title": "Aqueduct",
 		"display": "hidden"
@@ -17,13 +17,7 @@
 	},
 	"contracts": {
 		"title": "Contracts",
-		"href": "https://github.com/allo-protocol/allo-v2/tree/main/contracts#contract-deployment-information-for-testnets",
+		"href": "https://github.com/allo-protocol/allo-v2/tree/main/contracts",
 		"newWindow": true
-	},
-	"indexers": {
-		"title": "Indexers",
-		"display": "normal"
-	},
-	"allo-improvement-proposals": "Allo Improvement Proposals",
-	"getting-involved": "Getting Involved"
+	}
 }

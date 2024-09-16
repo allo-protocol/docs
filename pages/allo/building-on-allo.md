@@ -13,7 +13,7 @@ In addition to this document, you should review the
 page. Combined, the three documents should give you a good idea of the code
 you'll need to write to integrate your application with Allo. If you are also
 interacting with the Registry, then also review [Integrating with the Project
-Registery](/project-registry/integrating-with-the-project-registry).
+Registery](/registry/integrating-with-the-registry).
 
 ## How to use this page
 
@@ -78,7 +78,7 @@ A couple of other technical notes about creating a pool:
 
 1. Both methods assume that `msg.sender` is a member of or the owner of the
    `_profileId` provided. The `_profileId` is a unique ID provided by the
-   [Registry](/project-registry). This means that a pool has to be created by
+   [Registry](/registry). This means that a pool has to be created by
    someone who is a part of a project profile.
 2. Pools can be created with a starting balance of 0, and then funded later with
    `fundPool` (described below). If you're building an application on Allo, this
