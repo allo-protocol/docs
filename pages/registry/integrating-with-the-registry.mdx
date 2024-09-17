@@ -3,7 +3,7 @@ import { Tabs, Tab } from 'nextra/components'
 # Integrating with the Project Registry
 There are two ways to interact with the Project Registry. 
 1. Through the `Registry.sol` contract
-2. Through the Allo subgraph
+2. Through the Indexer
 
 ## Writing to the Project Registry
 ### Create a Profile
@@ -100,87 +100,7 @@ updateProfilePendingOwner(profileId, pendingOwner)
 | profileId | bytes32 | The id of the profile to update. | 
 | pendingOwner | address | The address for the new profile owner. | 
 
-## Reading Project Registry Data Using The Graph
+## Reading Project Registry Data Using Indexer
 
-Project registry data is publicly available through The Graph.
-See the [Indexers](../overview/indexers.md) page for links to the
-latest graph.
-
-
-Subgraph data can be accessed either manually through the subgraph Playground,
-or programmatically through The Graph API. For more information about how to set
-up these methods, please see the [Querying the
-Graph](https://thegraph.com/docs/en/querying/querying-the-graph/) page in The
-Graph documentation.
-
-### Building Queries
-To see the data currently available in the Allo V2 Subgraph, use the 
-[Graph Playground](https://thegraph.com/hosted-service/subgraph/allo-protocol/allo-v2-goerli) 
-and click on the explorer. You will also be able to build and test
-queries directly in the UI. 
-
-## Code Examples
-<Tabs items={['js', 'solidity']}>
-  <Tab>
-    ```
-    // This example uses js to read from the subgraph
-    
-    // Allo subgraph query url
-    const url = `https://api.thegraph.com/subgraphs/name/allo-protocol/allo-v2-goerli`
-    // define the query
-    // This query returns the name of 10 most recently created profiles
-    const profileQuery = ` {
-      profiles(first: 10, orderBy: createdAt) 
-      {
-        name
-      }
-    }`;
-    
-    //prepare the request body
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query: profileQuery }),
-    };
-
-    //handle the response
-    fetch(url, options)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-
-    ```
-  </Tab>
-
-  <Tab>
-    ```
-      // This example is modified from 'QVBaseStrategy.sol'
-      // It reads data directly from the registry to see 
-      // if an anchor id is a member of the profile
-
-      //import contracts
-      import {IAllo} from "../../core/interfaces/IAllo.sol";
-      import {IRegistry} from "../../core/interfaces/IRegistry.sol";
-
-      /// The registry contract. allo.getRegistry returns the registry address
-      IRegistry private _registry = allo.getRegistry();;
-
-      // function to check if anchor is a member
-      function _isProfileMember(address _anchor, address _sender) internal view returns (bool) {
-        IRegistry.Profile memory profile = _registry.getProfileByAnchor(_anchor);
-        return _registry.isOwnerOrMemberOfProfile(profile.id, _sender);
-    }
-
-    ```
-  </Tab>
-</Tabs>
-
-
-
-
+Project registry data is publicly available through Indexer.
+See the [Indexer Project](/indexer/project) page.

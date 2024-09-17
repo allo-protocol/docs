@@ -9,10 +9,10 @@
 ## Core Concepts
 
 *   [Conceptual Overview](core-concepts/conceptual-overview.md)
-*   [Project Registry](core-concepts/project-registry/README.md)
-    *   [Getting Started](core-concepts/project-registry/getting-started.md)
-    *   [Integrating with the Project Registry](core-concepts/project-registry/integrating-with-the-project-registry.md)
-    *   [Interface and Spec](core-concepts/project-registry/interface-and-spec.md)
+*   [Project Registry](core-concepts/registry/README.md)
+    *   [Getting Started](core-concepts/registry/getting-started.md)
+    *   [Integrating with the Project Registry](core-concepts/registry/integrating-with-the-registry.md)
+    *   [Interface and Spec](core-concepts/registry/interface-and-spec.md)
 *   [Program](core-concepts/program.md)
 *   [Round](core-concepts/round.md)
 *   [Voting Strategy](core-concepts/voting-strategy/README.md)
@@ -30,5 +30,5 @@
 
 ## Extras
 
-*   [Getting Involved](extras/getting-involved.md)
-*   [Allo Improvement Proposals](extras/allo-improvement-proposals.md)
+*   [Getting Involved](development/getting-involved)
+*   [Allo Improvement Proposals](development/allo-improvement-proposals)

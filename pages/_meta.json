@@ -16,19 +16,16 @@
 		"title": "Strategies",
 		"type": "page"
 	},
-	"project-registry": {
-		"title": "Project Registry",
+	"registry": {
+		"title": "Registry",
 		"type": "page"
 	},
 	"indexer": {
 		"title": "Indexer",
 		"type": "page"
 	},
-	"blog": {
-		"title": "Blog",
-		"type": "page",
-		"theme": {
-			"typesetting": "article"
-		}
+	"development": {
+		"title": "Development",
+		"type": "page"
 	}
 }

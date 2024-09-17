@@ -46,6 +46,6 @@ details see
 
 ## Read More
 For more information about how to create and update a profile, including sample 
-code, see [Create Profile](/project-registry/create-profile) and [Update Profile](/project-registry/update-profile) 
+code, see [Create Profile](/registry/create-profile) and [Update Profile](/registry/update-profile) 
 pages.
 
