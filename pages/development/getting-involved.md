@@ -1,12 +1,16 @@
 # Getting Involved
 
 Thank you for your desire to build with Allo!
-
-Below you will find some ways to help, but please don't feel limited by them. A
-great place to discuss among community and fellow developers
-is the [Gitcoin Discord](https://discord.gg/gitcoin).
+Below you will find some ways to start, but please don't feel limited by them. 
 
 ## Join the Community
+
+We maintain an [Allo Devs Telegram](https://t.me/+2OHfGICIvPQxODFh) group that
+is a good resource for asking questions, getting feedback on ideas, and
+connecting with other developers.
+
+Another great place to discuss among community and developers is the
+[Gitcoin Discord](https://discord.gg/gitcoin).
 
 This server has dedicated  `⁠👷🏾|grants-lab-builders` & `⁠🔨|allo-protocol-builders` 
 channels. Find them by agreeing to the server rules, and from the `👋|start-here`
@@ -26,4 +30,4 @@ serves as the base-layer, but we need devs like you to build interesting
 products on top of it!
 
 When in doubt, post in the above `⁠🔨|allo-protocol-builders` channel or 
-reach out to [@henrywritestech](https://x.com/henrywritestech) on Twitter/X.
+the Allo Devs Telegram group.
