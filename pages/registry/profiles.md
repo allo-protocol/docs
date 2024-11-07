@@ -40,12 +40,5 @@ struct Metadata {
 | protocol | uint256 | An id from the list of available protocols. | 
 | pointer | string | The pointer to the off chain data. | 
 
-Currently, the only protocol id available is '1' for IPFS. For more details on
-details see
-[`MetaPtrProtocol.sol`](https://github.com/allo-protocol/allo-contracts/blob/main/docs/MetaPtrProtocol.md)
-
-## Read More
-For more information about how to create and update a profile, including sample 
-code, see [Create Profile](/registry/create-profile) and [Update Profile](/registry/update-profile) 
-pages.
+Currently, the only protocol id available is '1' for IPFS. Others may be added later.
 

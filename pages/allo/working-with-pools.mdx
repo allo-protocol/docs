@@ -9,8 +9,8 @@ import Image from 'next/image'
     />
 </div>
 
-Pools handle the implementation of allocation strategies in Allo. While the
-details of how a pool of funds will be allocated and distributed are reserved
+Pools are tied to strategies in Allo. While the
+terms of how a pool of capital will be allocated/distributed are reserved
 for the strategy contract, those contracts should not be called directly.
 Instead, a pool will be created that links to the strategy and all interactions
 with that strategy will happen through `Allo.sol`.

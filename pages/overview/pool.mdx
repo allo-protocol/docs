@@ -5,21 +5,21 @@ import Image from 'next/image'
 
 # Pool
 
-Allo distributes funds in pools, where each fund is owned by a profile in the
-[registry](/overview/registry) and has an [allocation
-strategy](/overview/allocation-strategy) that determines how the funds are
-distributed.
+Allo generalizes capital in to pools, which are created and owned by a profile (project)
+in the [registry](/overview/registry). Since a pool of capital is not useful
+without a way to control it, they are created with a
+[strategy](/overview/allocation-strategy) to determine how the funds are
+flow and are distributed.
 
 For example, if a DAO wanted to hold a quarterly vote to distribute some of its
-treasury among community projects, then it would create a new pool each quarter.
+treasury among community projects, then it might create a new pool each quarter.
 Projects, represented by profiles in the registry, apply to receive funding
 from the quarterly pool. The allocation strategy determines who is eligible to
-receive funding, who can vote, and how funds are allocated and distributed and
-offers a lot of freedom to strategy writers for how to implement these things.
+receive funding, who can vote, and how funds are allocated and distributed.
+Great freedom is given to strategy writers for how to implement these details.
 
-If the DAO uses Quadratic Funding, like Gitcoin's Grants Program, then members
-of the DAO donate to the projects they want to support. Each donation is also
+If the DAO uses [Quadratic Funding](https://allo.expert/mechanisms/quadratic-funding)
+then members of the DAO donate to the projects they want to support. Each donation is
 a 'vote' for how much of the pool that project should receive. When voting is
-finished, the pool distribution is calculated and then distributed to
-recipients.
+finished, the pool distribution is calculated and distributed to recipients.
 

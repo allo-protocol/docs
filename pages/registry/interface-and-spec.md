@@ -5,8 +5,7 @@ description: What can I do with the Project Registry?
 # Interface and Spec
 
 This documentation covers methods and events available through the Project
-Registry implementation. See [Getting Started](getting-started.md) for more
-information on interacting with the Project Registry.
+Registry implementation.
 
 ## Functions
 

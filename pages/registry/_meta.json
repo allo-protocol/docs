@@ -32,7 +32,7 @@
 	},
 	"code": {
 		"title": "Source Code",
-		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Registry.sol",
+		"href": "https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/core/Registry.sol",
 		"newWindow": true
 	},
 	"create-profile":{

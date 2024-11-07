@@ -1,9 +1,9 @@
 # Distribution
 
 Finally, strategies need to determine how payouts are handled for recipients.
-In general, a distribution strategy is resposible for:
+In general, a strategy is resposible for:
 
-* Calculatiung payout amounts
+* Calculating payout amounts
 * Determining when and how often payouts occur
 * Ensuring payout eligibility and accuracy
 * Managing who can initiate a payout
@@ -15,28 +15,16 @@ distributed from a pool. Some common ways to distribute funds include:
 
 * Sending the payout as a lump-sum
 * Creating a set of milestones for when funds can be requested by recipients
-* Turning on a stream with Sablier or Superfluid
+* Using continuous streaming like Sablier or Superfluid
 
 Regardless of how you decide to do distributions, these payouts will be
-implemented by calling the `distribute()` function in `Allo.sol`.
-
-## A Note on Payouts
-
-One of the things that Allo allows for is experimenting with different
-mechanisms for distributing pools of capital. This falls under the general
-category of Mechanism Design and Quadratic Funding, popularised by Gitcoin
-Grants, is one example.
-
-Your allocation strategy is responsible for calculating how much a recipient
-should receive (or how much they are allocated). This can sometimes be
-non-linear, as in the case of Quadratic Funding: the more donations you receive,
-the more of the pool you're entitled to.
+implemented by calling the `distribute` method in `Allo.sol`.
 
 ## Examples
 | Strategy Contract | Payout Calculation | Distribution Mechanic | Who Can Make Distributions | Undistributed Funds | 
 | --- | --- | --- | --- | --- |
-| [Donation Voting](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/donation-voting) | Payouts are proportional to donations, calculated off chain | Payouts are in a lump sum to any recipients marked `ready` | Only a pool manager can distribute funds | Undistributed funds can be reclaimed by the pool manager 30 days after allocation ends |
-| [Direct Grants Simple](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/direct-grants-simple) | Amount set during allocate will be payout amount | Payouts are milestone based  | Only a pool manager can distribute funds | No specific strategy for undistributed funds |
-| [RFP Committee](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies/rfp-committee) | Payout amount is specified by recipient in their bid | Distribution is milestone based | Only pool admins can distribute funds | No specific strategy for undistributed funds | 
+| [Donation Voting](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples/donation-voting) | Payouts are proportional to donations, calculated off chain | Payouts are in a lump sum to any recipients marked `ready` | Only a pool manager can distribute funds | Undistributed funds can be reclaimed by the pool manager 30 days after allocation ends |
+| [Direct Grants](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples/direct-allocation) | Amount set during allocate will be payout amount | Payouts are milestone based  | Only a pool manager can distribute funds | No specific strategy for undistributed funds |
+| [RFP](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples/rfp) | Payout amount is specified by recipient in their bid | Distribution is milestone based | Only pool admins can distribute funds | No specific strategy for undistributed funds | 
 
 

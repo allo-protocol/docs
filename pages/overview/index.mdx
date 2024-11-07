@@ -8,10 +8,16 @@ import Image from 'next/image'
   alt="Allo is live on mainnets" />
 </div>
 
-Allo Protocol is made up of the following components:
+Allo's on-chain components are made up of the following:
 
-* A core contract that acts as a [ **Pool** ](/overview/pool) manager
-* Custom contracts, called [**Allocation Strategies**](/overview/allocation-strategy) that control how a pool is distributed 
-* A [**Project Registry**](overview/registry). This is a universal, on-chain registry of projects used for reputation and eligibility
+* A central contract [**`Allo.sol`**](/allo) used to create and interact with
+[**Pools**](/overview/pool) (some concentration of capital)
+* Customizable contracts called [**Strategies**](/overview/allocation-strategy) that
+implement unique funding or allocation methods to control the flow in and out of Pools
+* A central [**`Registry.sol`**](overview/registry) serving as an on-chain registry of
+projects, useful for reputation, eligibility, and more
 
+Of these three components, the Strategy is where builders would customize and deploy
+to-chain themselves. In most cases, you should use the already deployed
+Allo and Registry contracts.
 Each of these is explained further in the next sections of the documentation.
