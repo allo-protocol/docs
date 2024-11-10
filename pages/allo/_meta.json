@@ -5,13 +5,15 @@
 		"title": "Core Concepts"
 	},
 	"cloneable-strategies": {
-		"title": "Cloneable Strategies"
+		"title": "Cloneable Strategies",
+		"display": "hidden"
 	},
 	"pool-roles": {
 		"title": "Pool Roles"
 	},
 	"fees": {
-		"title": "Fees"
+		"title": "Fees",
+		"display": "hidden"
 	},
 	"guides": {
 		"type": "separator",
@@ -24,7 +26,8 @@
 		"title": "Building On Allo"
 	},
 	"working-with-pools":{
-		"title": "Working with Pools"
+		"title": "Working with Pools",
+		"display": "hidden"
 	},
 	"auditing-a-strategy":{
 		"title": "Auditing a Strategy",
@@ -36,7 +39,7 @@
 	},
 	"code":{
 		"title": "Source Code",
-		"href": "https://github.com/allo-protocol/allo-v2/blob/main/contracts/core/Allo.sol",
+		"href": "https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/core/Allo.sol",
 		"newWindow": true
 	}
 }

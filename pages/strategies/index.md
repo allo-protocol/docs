@@ -2,21 +2,21 @@
 description: What do I need to know about strategies?
 ---
 
-Allo uses a single strategy contract to handle all logic around recipient
-eligibility, allocation, and token distribution. Every pool needs a pre-deployed
-strategy before it can be created. Developers can choose to create a custom
-strategy or use an existing one. You can read more on the [Cloneable
-Strategies](/allo/cloneable-strategies) page.
+The command center [`Allo.sol`](/allo) calls to strategy contracts to determine logic around recipient
+eligibility, allocation, and token distribution. Every pool is created with a strategy, which it is
+tied to. You may choose to create a custom strategy, or clone an existing one.
 
-If you're writing a custom strategy, we provide
-a [`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/BaseStrategy.sol)
-that all strategies should inherit from. For more information, see the [Writing
-a Custom Strategy](/strategies/writing-a-custom-strategy) page. Strategies must
-be deployed prior to creating a new pool.
+All strategies, including custom ones, inherit a 
+[`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies)
+that defines the common interface. This interface is how the strategy is able to be
+used even when calling from `Allo.sol`.
 
-## Allocation Strategies
+There is a wealth of developer-oriented information in the bundled Strategy
+[ReadMe.md](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/README.md).
 
-Allocation strategies are responsible for three things:
+## Strategies
+
+Strategies are responsible for three general concepts:
 
 1. [Recipient Eligibility](/strategies/recipients): Who is eligible to receive
    funding from a pool? How is that eligibility determined?
@@ -27,17 +27,21 @@ Allocation strategies are responsible for three things:
    how are they distributed? In a lump-sum, in milestone-based payments, as
    a stream, or something else?
 
-Allo provides a standard set of functions for implementing these, but what they
-mean and how you'll use them depend a lot on what you're building. Explore each
-of these core concepts for more details, including examples of how they can be
-used to meet different requirements.
+Allo provides a standard pattern for implementing these, but what they do is entirely
+up to you. You're encouraged to look over [existing examples](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples),
+ [allo.expert](https://allo.expert/), and beyond for inspiration.
 
 ## Strategy Library
 
-The [Strategy
-Library](https://github.com/allo-protocol/allo-v2/tree/main/contracts/strategies)
-includes a variety of strategy contracts. These contracts can be used as is or
-as a starting point for a custom strategy.
+The [Strategy Library](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies)
+includes a variety of useful components. 
+* [Example contracts](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples),
+ to be used out of the box or as reference
+* [Extensions](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/extensions)/
+[Libraries](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/libraries)
+to provide readily reusable components, taking grunt work out of custom development
+* [BaseStrategy.sol](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/BaseStrategy.sol)
+ to provide a common pattern for calling of strategy methods
 
-Please note that these strategies are presented as-is and many of them have not been
-audited.
+Please note that these strategies are presented as-is, and some components
+may not be audited.

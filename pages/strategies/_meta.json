@@ -31,9 +31,11 @@
 		"title": "Contracts"
 	},
 	"interface":{
-		"title": "Interface"
+		"title": "Interface",
+		"display": "hidden"
 	},
 	"library":{
-		"title": "Strategy Library"
+		"title": "Strategy Library",
+		"href": "https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies"
 	}
 }

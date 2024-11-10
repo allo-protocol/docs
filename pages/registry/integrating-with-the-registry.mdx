@@ -21,8 +21,8 @@ createProfile(nonce, name, metadata, signer.address, []);
 | _nonce | uint256 | nonce is used to create the profile profileId. By providing a nonce projects can ensure having the same id across chains. |
 | _name | string | The profile name. This is used to generate the anchor. |
 | _metadata | Metadata | See the metadata section below for more details.|
-| _owner | address | The owner of the profile. See [Roles](/roles.md) for more details about profile owners. |
-| _members | address[] | Array of profile member address. [Roles](/roles.md) for more details about profile members. |
+| _owner | address | The owner of the profile. See [Roles](/registry/roles) for more details about profile owners. |
+| _members | address[] | Array of profile member address. [Roles](/registry/roles) for more details about profile members. |
 
 #### Metadata
 
@@ -40,9 +40,7 @@ struct Metadata {
 | protocol | uint256 | An id from the list of available protocols. | 
 | pointer | string | The pointer to the off chain data. | 
 
-Currently, the only protocol id available is '1' for IPFS. For more details on
-details see
-[`MetaPtrProtocol.sol`](https://github.com/allo-protocol/allo-contracts/blob/main/docs/MetaPtrProtocol.md)
+Currently, the only protocol id available is '1' for IPFS. Others may be added later.
 
 ### Updating a Profile
 

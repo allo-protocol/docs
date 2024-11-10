@@ -5,11 +5,11 @@ description: What functions are available from the IStrategy interface?
 # Interface and Spec
 
 This documentation covers methods and events in the
-[`IStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/IStrategy.sol)
+[`IBaseStrategy.sol`](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/IBaseStrategy.sol)
 interface. See [Writing a Custom
 Strategy](writing-a-custom-strategy.md) for more information on
 implementing your own strategies, including how to use the provided
-[`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/BaseStrategy.sol)
+[`BaseStrategy.sol`](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/BaseStrategy.sol)
 
 ## Functions
 
