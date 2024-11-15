@@ -42,3 +42,11 @@ struct Metadata {
 
 Currently, the only protocol id available is '1' for IPFS. Others may be added later.
 
+### Profile Types
+
+While both grants programs and the builders applying to them create
+profiles in the registry, it can be useful to distinguish the two.
+
+It is customary for programs to include in their metadata `"type":"program"`,
+as can be seen when looking at a sample Grant Round [profile metadata](https://gateway.pinata.cloud/ipfs/bafkreiae6y4lanik5uyqpe5jyahwe3cu2ghiurkiwgumhrkvsmx2swqzke/). This 
+distinction is the basis for helping make useful queries in the [Indexer](/indexer/project).
