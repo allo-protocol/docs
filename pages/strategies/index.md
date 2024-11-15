@@ -16,7 +16,11 @@ There is a wealth of developer-oriented information in the bundled Strategy
 
 ## Strategies
 
-Strategies are responsible for three general concepts:
+While [allocation mechanisms](https://allo.expert/mechanisms) can vary
+significantly, Allo generalizes the pattern to the
+**register-allocate-distribute** flow.
+
+This flow addresses the following:
 
 1. [Recipient Eligibility](/strategies/recipients): Who is eligible to receive
    funding from a pool? How is that eligibility determined?

@@ -13,6 +13,9 @@
 	"distribution":{
 		"title": "Distribution"
 	},
+	"extensions":{
+		"title": "Extensions"
+	},
 	"guides": {
 		"type": "separator",
 		"title": "Guides",
