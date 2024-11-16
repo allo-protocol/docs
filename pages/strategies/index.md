@@ -20,6 +20,8 @@ While [allocation mechanisms](https://allo.expert/mechanisms) can vary
 significantly, Allo generalizes the pattern to the
 **register-allocate-distribute** flow.
 
+<img src="/Flow of funds-v02.png" alt="The strategy register allocate distribute logic pattern" />
+
 This flow addresses the following:
 
 1. [Recipient Eligibility](/strategies/recipients): Who is eligible to receive
